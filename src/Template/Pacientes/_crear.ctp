@@ -44,4 +44,17 @@
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
+
+    <div
+    <?= $this->Paginator->counter('Página {{page}} de {{pages}}, mostrando {{current}} resultados de {{count}} en total') ?>
+</div>
+<div>
+    <?= $this->Paginator->first(__('Primero')) ?>
+    <?= $this->Paginator->prev(__('Anterior')) ?>
+    <span>
+                        <?= $this->Paginator->numbers() ?>
+                    </span>
+    <?= $this->Paginator->next(__('Siguiente')) ?>
+    <?= $this->Paginator->last(__('Último')) ?>
+</div>
 </div>

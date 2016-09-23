@@ -24,7 +24,7 @@
                 <li>
                     <?= $this->Html->link(
                         $this->Html->image('icons/color/add.png', ['alt' => 'Crear Pedido']) . ' ' . __('Nuevo Pedido'),
-                        ['controller' => 'Pedidos', 'action' => 'crear'],
+                        ['action' => 'crear'],
                         ['escape' => false]) ?>
                 </li>
                 <li>

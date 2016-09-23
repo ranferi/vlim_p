@@ -55,6 +55,7 @@
 
     <!-- Statistic Plugin JavaScript Files (requires metadata and excanvas for IE) -->
     <?= $this->Html->script('jquery.metadata', ['block' => true]) ?>
+    <?= $this->Html->script('/plugins/datatables/datatables.min', ['block' => true]) ?>
 
     <!--[if lt IE 9]>
     <?= $this->Html->script('excanvas.js') ?>
