@@ -24,7 +24,7 @@
             <div class="da-form-inline">
                 <div class="da-form-row">
                     <div class="da-form-col-8-8">
-                        <label class="da-tooltip-n" title="Nombre Completo *"><?= __('Nombre Completo') ?> <span class="required">*</span></label>
+                        <label><span class="da-tooltip-n" title="Nombre Completo *"><?= __('Nombre Completo') ?></span> <span class="required">*</span></label>
                         <div class="da-form-item ">
                             <?php echo $this->Form->text('nombre_completo');; ?>
                         </div>
@@ -32,16 +32,22 @@
                 </div>
                 <div class="da-form-row">
                     <div class="da-form-col-4-8">
-                        <label class="da-tooltip-n" title="Genero *"><?= __('Genero') ?> <span class="required">*</span></label>
+                        <label><span class="da-tooltip-n" title="Genero *"><?= __('Genero') ?></span> <span class="required">*</span></label>
                         <ul class="da-form-list">
-                            <li><input name="genero" type="radio"> <label>Masculino</label></li>
-                            <li><input name="gendero" type="radio"> <label>Femenino</label></li>
+                            <?php echo $this->Form->radio(
+                                'genero',
+                                [
+                                    ['value' => 0, 'text' => 'Masculino'],
+                                    ['value' => 1, 'text' => 'Femenino'],
+                                ]
+                            ); ?>
+
                         </ul>
                     </div>
                     <div class="da-form-col-4-8">
                         <label class="da-tooltip-n" title="Fecha de Nacimiento *"><?= __('Fecha de Nacimiento') ?> <span class="required">*</span></label>
                         <div class="da-form-item">
-                            <?php echo $this->Form->text('fecha_nacimiento', ['id' => 'da-ex-datetimepicker', 'class' => 'hasDatepicker']); ?>
+                            <?php echo $this->Form->text('fecha_nacimiento', ['id' => 'da-ex-datetimepicker']); ?>
                         </div>
                     </div>
                 </div>
@@ -119,33 +125,14 @@
                     <div class="da-form-col-2-8">
                         <label class="da-tooltip-n" title="Estatura *"><?= __('Estatura (cm.)') ?> <span class="required">*</span></label>
                         <div class="da-form-item">
-                            <span class="ui-spinner ui-widget">
-                                <?php echo $this->Form->text('estatura', ['id' => 'da-ex-s1']); ?>
-                                <span class="ui-spinner-buttons">
-                                    <span class="ui-spinner-up ui-spinner-button ui-state-default ui-corner-tr">
-                                        <span class="ui-icon ui-icon-triangle-1-n">&nbsp;</span>
-                                    </span>
-                                    <span class="ui-spinner-down ui-spinner-button ui-state-default ui-corner-br">
-                                        <span class="ui-icon ui-icon-triangle-1-s">&nbsp;</span>
-                                    </span>
-                                </span>
-                            </span>
+                            <?php echo $this->Form->text('estatura', ['id' => 'da-ex-s1']); ?>
+
                         </div>
                     </div>
                     <div class="da-form-col-2-8">
                         <label class="da-tooltip-n" title="Peso *"><?= __('Peso (kg.)') ?> <span class="required">*</span></label>
                         <div class="da-form-item">
-                            <span class="ui-spinner ui-widget">
-                                <?php echo $this->Form->text('peso', ['id' => 'da-ex-s2']); ?>
-                                <span class="ui-spinner-buttons">
-                                    <span class="ui-spinner-up ui-spinner-button ui-state-default ui-corner-tr">
-                                        <span class="ui-icon ui-icon-triangle-1-n">&nbsp;</span>
-                                    </span>
-                                    <span class="ui-spinner-down ui-spinner-button ui-state-default ui-corner-br">
-                                        <span class="ui-icon ui-icon-triangle-1-s">&nbsp;</span>
-                                    </span>
-                                </span>
-                            </span>
+                            <?php echo $this->Form->text('peso', ['id' => 'da-ex-s2']); ?>
                         </div>
                     </div>
                     <div class="da-form-col-4-8">

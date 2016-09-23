@@ -40,7 +40,7 @@
             <?= $this->fetch('content') ?>
         </div>
         <div id="footer">
-            <?= $this->Html->link(__('Back'), 'javascript:history.back()') ?>
+            <?= $this->Html->link(__('Regresar'), 'javascript:history.back()') ?>
         </div>
     </div>
 </body>
