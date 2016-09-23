@@ -162,11 +162,11 @@
         </div>
 
         <!-- Footer -->
-        <footer id="da-footer">
+        <div id="da-footer">
             <div class="da-container clearfix">
                 <p>Copyright 2016. Piedica.
             </div>
-        </footer>
+        </div>
     </div>
 
 

@@ -26,9 +26,10 @@
                 Campos con <span class="required">*</span> son requeridos.
             </div>
             <?= $this->Form->create($aviso, ['class' => 'da-form']) ?>
+            <div class="da-form-inline">
                 <div class="da-form-row">
                     <label><?= __('Título') ?> <span class="required">*</span></label>
-                    <div class="da-form-item large">
+                    <div class="da-form-item">
                         <?php echo $this->Form->text('titulo');; ?>
                     </div>
                 </div>
@@ -48,6 +49,7 @@
                 <div class="da-button-row">
                     <?= $this->Form->button(__('Enviar'), ['class' => 'da-button blue']) ?>
                 </div>
+            </div>
             <?= $this->Form->end() ?>
         </div>
     </div>
