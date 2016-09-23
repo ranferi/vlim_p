@@ -113,7 +113,7 @@
                     <div id="da-logo-wrap">
                         <div id="da-logo">
                             <div id="da-logo-img">
-                                <a href="dashboard.html">
+                                <a href="#">
                                     <?= $this->Html->image('background_logo.png', ['alt' => 'Admin']) ?>
                                 </a>
                             </div>

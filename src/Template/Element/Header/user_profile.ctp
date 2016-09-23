@@ -12,7 +12,7 @@
             <span class="caret-inner"></span>
         </li>
         <li class="da-dropdown-divider"></li>
-        <li><a href="dashboard.html">Inicio</a></li>
+        <li><a href="#">Inicio</a></li>
         <li class="da-dropdown-divider"></li>
         <li><a href="#">Perfil</a></li>
         <li><a href="#">Configuración</a></li>
