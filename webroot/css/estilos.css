@@ -1,0 +1,10 @@
+.pull-right {
+    float: right;
+}
+.summary {
+    margin-bottom: 5px;
+    text-align: right;
+}
+span.required {
+    color: #ff0000;
+}
