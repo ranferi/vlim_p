@@ -1,5 +1,5 @@
 <div class="grid_4">
-    <div class="da-panel collapsible">
+    <div class="da-panel collapsible scrollable">
         <div class="da-panel-header">
             <span class="da-panel-title">
                 <?= $this->Html->image('icons/black/16/list.png', ['alt' => 'Lista de Avisos']) ; ?>

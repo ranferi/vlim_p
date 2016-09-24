@@ -1,0 +1,395 @@
+2016-09-20 18:31:21 Warning: Warning (512): Method Cake\View\Helper\HtmlHelper::img does not exist in [C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\View\Helper.php, line 139]
+Request URL: /projects/piedica/usuarios
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Helper::__call() - CORE\src\View\Helper.php, line 139
+Cake\View\Helper\HtmlHelper::img() - APP/Template\Layout\default.ctp, line 121
+include - APP/Template\Layout\default.ctp, line 121
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 638
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 82
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-09-20 18:31:30 Warning: Warning (512): Method Cake\View\Helper\HtmlHelper::img does not exist in [C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\View\Helper.php, line 139]
+Request URL: /projects/piedica/usuarios
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+Cake\View\Helper::__call() - CORE\src\View\Helper.php, line 139
+Cake\View\Helper\HtmlHelper::img() - APP/Template\Layout\default.ctp, line 121
+include - APP/Template\Layout\default.ctp, line 121
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 638
+Cake\View\View::render() - CORE\src\View\View.php, line 596
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 82
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-09-21 01:02:57 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\projects\piedica\src\Template\Avisos\crear.ctp, line 80]
+Request URL: /projects/piedica/avisos/crear
+Referer URL: http://localhost/projects/piedica/avisos/administrar
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Avisos\crear.ctp, line 80
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 82
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-09-21 01:23:21 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\projects\piedica\src\Template\Avisos\crear.ctp, line 62]
+Request URL: /projects/piedica/avisos/crear
+Referer URL: http://localhost/projects/piedica/avisos/administrar
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Avisos\crear.ctp, line 62
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 82
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-09-21 01:25:15 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\projects\piedica\src\Template\Avisos\crear.ctp, line 62]
+Request URL: /projects/piedica/avisos/crear
+Referer URL: http://localhost/projects/piedica/avisos/administrar
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Avisos\crear.ctp, line 62
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 82
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-09-21 01:52:46 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 205]
+Request URL: /projects/piedica/avisos/crear
+Referer URL: http://localhost/projects/piedica/avisos/administrar
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-21 01:52:46 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /projects/piedica/avisos/crear
+Referer URL: http://localhost/projects/piedica/avisos/administrar
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 205)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-21 17:33:13 Error: Fatal Error (1): Call to undefined method App\Controller\AvisosController::loadHelper() in [C:\xampp\htdocs\projects\piedica\src\Controller\AvisosController.php, line 24]
+Request URL: /projects/piedica/avisos/administrar?page=2&sort=Avisos.id&direction=asc
+Referer URL: http://localhost/projects/piedica/avisos/administrar?sort=id&direction=asc
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-21 17:33:15 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\AvisosController::loadHelper()
+Request URL: /projects/piedica/avisos/administrar?page=2&sort=Avisos.id&direction=asc
+Referer URL: http://localhost/projects/piedica/avisos/administrar?sort=id&direction=asc
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-21 18:23:19 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\projects\piedica\src\Template\Avisos\editar.ctp, line 26]
+Request URL: /projects/piedica/avisos/editar/31
+Referer URL: http://localhost/projects/piedica/avisos/ver/31
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Avisos\editar.ctp, line 26
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 82
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-09-22 20:16:36 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\projects\piedica\src\Template\Pacientes\index.ctp, line 32]
+Request URL: /projects/piedica/pacientes
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 146
+include - APP/Template\Pacientes\index.ctp, line 32
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1008
+Cake\View\View::_render() - CORE\src\View\View.php, line 967
+Cake\View\View::render() - CORE\src\View\View.php, line 591
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 617
+Cake\Http\ActionDispatcher::_invoke() - CORE\src\Http\ActionDispatcher.php, line 128
+Cake\Http\ActionDispatcher::dispatch() - CORE\src\Http\ActionDispatcher.php, line 96
+Cake\Http\BaseApplication::__invoke() - CORE\src\Http\BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE\src\Http\Runner.php, line 65
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 51
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 82
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-09-22 22:15:28 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\View\Widget\SelectBoxWidget.php, line 205]
+Request URL: /projects/piedica/pacientes/crear
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-22 22:15:29 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /projects/piedica/pacientes/crear
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 205)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-22 23:47:46 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\xampp\htdocs\projects\piedica\src\Template\Pacientes\crear.ctp, line 42]
+Request URL: /projects/piedica/pacientes/crear
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-22 23:47:46 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '<'
+Request URL: /projects/piedica/pacientes/crear
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 42)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-23 00:13:56 Error: Fatal Error (1): Call to a member function has() on null in [C:\xampp\htdocs\projects\piedica\src\Template\Pacientes\ver.ctp, line 53]
+Request URL: /projects/piedica/pacientes/ver/98
+Referer URL: http://localhost/projects/piedica/pacientes/administrar
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-23 00:13:56 Error: [Cake\Error\FatalErrorException] Call to a member function has() on null
+Request URL: /projects/piedica/pacientes/ver/98
+Referer URL: http://localhost/projects/piedica/pacientes/administrar
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-23 00:15:50 Error: Fatal Error (1): Call to a member function has() on null in [C:\xampp\htdocs\projects\piedica\src\Template\Pacientes\ver.ctp, line 53]
+Request URL: /projects/piedica/pacientes/ver/98
+Referer URL: http://localhost/projects/piedica/pacientes/administrar
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-23 00:15:50 Error: [Cake\Error\FatalErrorException] Call to a member function has() on null
+Request URL: /projects/piedica/pacientes/ver/98
+Referer URL: http://localhost/projects/piedica/pacientes/administrar
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-23 00:16:18 Error: Fatal Error (1): Call to a member function has() on null in [C:\xampp\htdocs\projects\piedica\src\Template\Pacientes\ver.ctp, line 53]
+Request URL: /projects/piedica/pacientes/ver/98
+Referer URL: http://localhost/projects/piedica/pacientes/administrar
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-23 00:16:18 Error: [Cake\Error\FatalErrorException] Call to a member function has() on null
+Request URL: /projects/piedica/pacientes/ver/98
+Referer URL: http://localhost/projects/piedica/pacientes/administrar
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-23 00:37:57 Error: Fatal Error (1): Call to a member function has() on null in [C:\xampp\htdocs\projects\piedica\src\Template\Pacientes\ver.ctp, line 53]
+Request URL: /projects/piedica/pacientes/ver/98
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-23 00:37:57 Error: [Cake\Error\FatalErrorException] Call to a member function has() on null
+Request URL: /projects/piedica/pacientes/ver/98
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-23 17:11:50 Error: Fatal Error (4): syntax error, unexpected ')', expecting ']' in [C:\xampp\htdocs\projects\piedica\src\Template\Layout\default.ctp, line 159]
+Request URL: /projects/piedica/pacientes/crear
+Referer URL: http://localhost/projects/piedica/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-23 17:11:50 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')', expecting ']'
+Request URL: /projects/piedica/pacientes/crear
+Referer URL: http://localhost/projects/piedica/
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 159)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-23 18:51:04 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\projects\piedica\src\Template\Element\Sidebar\main_navigation.ctp, line 5]
+Request URL: /projects/piedica/pacientes/crear
+Referer URL: http://localhost/projects/piedica/pacientes/administrar
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-23 18:51:05 Error: [Cake\Error\FatalErrorException] Maximum execution time of 30 seconds exceeded
+Request URL: /projects/piedica/pacientes/crear
+Referer URL: http://localhost/projects/piedica/pacientes/administrar
+Client IP: 127.0.0.1
+Stack Trace:
+#0 C:\xampp\htdocs\projects\piedica\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 5)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

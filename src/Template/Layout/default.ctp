@@ -25,8 +25,6 @@
     <?= $this->Html->css('dandelion.css') ?>
     <?= $this->Html->css('demo.css') ?>
 
-
-
     <!-- Plugin Files -->
 
     <!-- FileInput Plugin -->
