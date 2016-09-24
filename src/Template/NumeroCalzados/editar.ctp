@@ -3,7 +3,7 @@
         <div class="da-panel-header">
             <span class="da-panel-title">
                 <?= $this->Html->image('icons/color/pencil.png', ['alt' => 'Editar Talla de Calzado']) ?>
-                <?= __('Editar Talla de Calzado') . h($numeroCalzado->id) ?>
+                <?= __('Editar Talla de Calzado # ') . h($numeroCalzado->id) ?>
             </span>
             <span class="da-panel-toggler"></span>
         </div>

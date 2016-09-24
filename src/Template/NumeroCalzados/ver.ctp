@@ -58,7 +58,7 @@
                 </tr>
                 <tr class="odd">
                     <th scope="row"><?= __('Created') ?></th>
-                    <td><?= $this->Number->format($numeroCalzado->created) ?></td>
+                    <td><?= h($numeroCalzado->created) ?></td>
                 </tr>
                 <tr class="even">
                     <th scope="row"><?= __('Modified') ?></th>

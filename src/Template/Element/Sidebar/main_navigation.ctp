@@ -25,7 +25,10 @@
                 <span class="da-nav-icon"><?= $this->Html->image('icons/black/32/applications.png', ['alt' => 'Otros Detalles']) ?></span>
                 <?= __('Otros') ?>
             </a>
-
+            <ul class="closed">
+                <li><?= $this->Html->link(__('Tallas'), ['controller' => 'NumeroCalzados', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Materiales'), ['controller' => 'Materiales', 'action' => 'index']) ?></li>
+            </ul>
         </li>
         <li>
             <a href="#">
