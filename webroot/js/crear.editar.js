@@ -1,25 +1,46 @@
 (function($) {
     $(document).ready(function(e) {
-        if($.fn.elrte) {
-            var options = {
-                cssClass : 'el-rte',
-                height   : 300,
-                toolbar  : 'normal',
-                cssfiles : ['../..plugins/elrte/css/elrte-inner.css'],
-                fmAllow: true,
-                fmOpen : function(callback) {
-                    $('<div id="myelfinder"></div>').elfinder({
-                        url : 'plugins/elfinder/connectors/php/connector.php',
-                        lang : 'en',
-                        height: 300,
-                        dialog : { width : 640, modal : true, title : 'Select Image' },
-                        closeOnEditorCallback : true,
-                        editorCallback : callback
-                    });
+        if( $.fn.spinner ) {
+
+            $('.da-spinner').spinner();
+
+            $('.da-decimal-spinner').spinner({
+                step: 0.01,
+                numberFormat: "n"
+            });
+
+            $.widget( "ui.timespinner", $.ui.spinner, {
+                options: {
+                    // seconds
+                    step: 60 * 1000,
+                    // hours
+                    page: 60
+                },
+
+                _parse: function( value ) {
+                    if ( typeof value === "string" ) {
+                        // already a timestamp
+                        if ( Number( value ) == value ) {
+                            return Number( value );
+                        }
+                        return +Globalize.parseDate( value );
+                    }
+                    return value;
+                },
+
+                _format: function( value ) {
+                    return Globalize.format( new Date(value), "t" );
                 }
-            };
-            $('#mensaje').elrte(options);
-        }
+            });
+
+            $( ".da-time-spinner" ).timespinner({
+                value: new Date().getTime()
+            });
+        };
+
+        $('#mensaje').redactor({
+            lang: 'es'
+        });
 
         $("#da-ex-datetimepicker").datetimepicker({
             beforeShow: function() {
@@ -29,15 +50,6 @@
             }
         });
 
-        if($.fn.spinner) {
-            var opts = {
-                s1: {},
-                s2: {places: 2, step : 0.25},
-            };
-
-            for (var n in opts)
-                $("#da-ex-" + n).spinner(opts[n]);
-        }
     });
 
 }) (jQuery);

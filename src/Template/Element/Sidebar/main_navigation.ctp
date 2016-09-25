@@ -28,6 +28,7 @@
             <ul class="closed">
                 <li><?= $this->Html->link(__('Tallas'), ['controller' => 'NumeroCalzados', 'action' => 'index']) ?></li>
                 <li><?= $this->Html->link(__('Materiales'), ['controller' => 'Materiales', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Tipo de Software'), ['controller' => 'Softwares', 'action' => 'index']) ?></li>
             </ul>
         </li>
         <li>

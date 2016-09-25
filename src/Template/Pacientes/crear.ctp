@@ -2,14 +2,14 @@
     <div class="span12">
         <div class="da-panel collapsible">
             <div class="da-panel-header">
-                <span class="da-panel-title"><i class="icol-pencil"></i> <?= __('Crear Paciente # ')?></span>
+                <span class="da-panel-title"><i class="icol-add"></i> <?= __('Crear Paciente')?></span>
                 <span class="da-panel-toggler"></span>
             </div>
             <div class="da-panel-toolbar">
                 <div class="btn-toolbar">
                     <div class="btn-group">
                         <?= $this->Html->link('<i class="icol-text-list-bullets"></i>' . ' ' . __('Administrar'),
-                            ['action' => 'administrar'], ['class' => 'btn', 'escape' => false]) ?>
+                            ['action' => 'index'], ['class' => 'btn', 'escape' => false]) ?>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,12 @@
+.redactor-editor .red-styled {
+    color: red;
+}
+.redactor-editor .blue-styled {
+    color: blue;
+    font-weight: bold;
+}
+.redactor-dropdown .redactor-dropdown-blue-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}

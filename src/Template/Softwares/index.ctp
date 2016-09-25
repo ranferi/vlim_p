@@ -1,45 +1,46 @@
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Software'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Sucursals'), ['controller' => 'Sucursals', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Sucursal'), ['controller' => 'Sucursals', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-<div class="softwares index large-9 medium-8 columns content">
-    <h3><?= __('Softwares') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('tipo_software') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($softwares as $software): ?>
-            <tr>
-                <td><?= $this->Number->format($software->id) ?></td>
-                <td><?= h($software->tipo_software) ?></td>
-                <td><?= h($software->created) ?></td>
-                <td><?= h($software->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $software->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $software->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $software->id], ['confirm' => __('Are you sure you want to delete # {0}?', $software->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-        </ul>
-        <p><?= $this->Paginator->counter() ?></p>
+<div class="row-fluid">
+    <div class="span12">
+        <div class="da-panel collapsible">
+            <div class="da-panel-header">
+                <span class="da-panel-title"><i class="icol-grid"></i> <?= __('Tipos de Software') ?></span>
+                <span class="da-panel-toggler"></span>
+            </div>
+            <div class="da-panel-toolbar">
+                <div class="btn-toolbar">
+                    <div class="btn-group">
+                        <?= $this->Html->link('<i class="icol-add"></i>' . ' ' . __('Crear'),
+                            ['action' => 'crear'], ['class' => 'btn', 'escape' => false]) ?>
+                    </div>
+                </div>
+            </div>
+            <div class="da-panel-content da-table-container">
+                <table id="da-ex-datatable-numberpaging" class="da-table">
+                    <thead>
+                    <tr role="row">
+                        <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('tipo_software') ?></th>
+                        <th scope="col" class="actions"><?= __('Acciones') ?></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <?php foreach ($softwares as $software): ?>
+                        <tr>
+                            <td><?= $this->Number->format($software->id) ?></td>
+                            <td><?= h($software->tipo_software) ?></td>
+                            <td class="actions da-icon-column">
+                                <?= $this->Html->link('<i class="icol-magnifier"></i>', ['action' => 'ver', $software->id],
+                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Ver Tipo de Software', 'escape' => false]) ?>
+                                <?= $this->Html->link('<i class="icol-pencil"></i>', ['action' => 'editar', $software->id],
+                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Editar Tipo de Software', 'escape' => false]) ?>
+                                <?= $this->Form->postLink('<i class="icol-cross"></i>', ['action' => 'eliminar', $software->id],
+                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Eliminar Tipo de Software', 'confirm' => __('¿Estás seguro de querer eliminar # {0}?', $software->id), 'escape' => false]) ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>

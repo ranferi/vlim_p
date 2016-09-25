@@ -2,7 +2,7 @@
     <div class="span12">
         <div class="da-panel collapsible">
             <div class="da-panel-header">
-                <span class="da-panel-title"><i class="icol-application-view-tile"></i> <?= __('Avisos') ?></span>
+                <span class="da-panel-title"><i class="icol-grid"></i> <?= __('Avisos') ?></span>
                 <span class="da-panel-toggler"></span>
             </div>
             <div class="da-panel-toolbar">

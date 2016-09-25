@@ -25,22 +25,22 @@
                 <?= $this->Form->create($aviso, ['class' => 'da-form']) ?>
                     <div class="da-form-inline">
                         <div class="da-form-row">
-                            <label class="da-form-label"><?= __('Título') ?> <span class="required">*</span></label>
+                            <label class="da-form-label"><span rel="tooltip" data-placement="top" title="Título *"><?= __('Título') ?></span> <span class="required">*</span></label>
                             <div class="da-form-item">
                                 <?php echo $this->Form->text('titulo', ['class' => 'span6']); ?>
                             </div>
                         </div>
                         <div class="da-form-row">
-                            <label class="da-form-label"><?= __('Empresa') ?> <span class="required">*</span></label>
+                            <label class="da-form-label"><span rel="tooltip" data-placement="top" title="Empresa *"><?= __('Empresa') ?></span> <span class="required">*</span></label>
                             <div class="da-form-item">
                                 <?php echo $this->Form->select('empresa_id',  $empresas); ?>
                             </div>
                         </div>
                         <?php echo $this->Form->hidden('usuario_id', ['value' => 1]); ?>
                         <div class="da-form-row">
-                            <label class="da-form-label"><?= __('Mensaje') ?> <span class="required">*</span></label>
+                            <label class="da-form-label"><span rel="tooltip" data-placement="top" title="Mensaje *"><?= __('Mensaje') ?></span> <span class="required">*</span></label>
                             <div class="da-form-item">
-                                <div id="mensaje"></div>
+                                <?php echo $this->Form->textarea('mensaje', ['id' => 'mensaje']); ?>
                             </div>
                         </div>
                         <div class="btn-row">

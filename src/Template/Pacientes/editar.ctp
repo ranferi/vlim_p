@@ -16,7 +16,7 @@
                         <?= $this->Html->link('<i class="icol-add"></i>' . ' ' . __('Crear'),
                             ['action' => 'crear'], ['class' => 'btn', 'escape' => false]) ?>
                         <?= $this->Html->link('<i class="icol-text-list-bullets"></i>' . ' ' . __('Administrar'),
-                            ['action' => 'administrar'], ['class' => 'btn', 'escape' => false]) ?>
+                            ['action' => 'index'], ['class' => 'btn', 'escape' => false]) ?>
                     </div>
                 </div>
             </div>

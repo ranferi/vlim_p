@@ -52,9 +52,11 @@
         $this->Html->script('libs/jquery.placeholder.min', ['block' => true]);
         /* Validation Plugin */
         $this->Html->script('/plugins/validate/jquery.validate', ['block' => true]);
-        /* elRTE Plugin */
-        $this->Html->script('/plugins/elrte/js/elrte.min', ['block' => true]);
-        $this->Html->css('/plugins/elrte/css/elrte', ['block' => true]);
+        /* Redactor */
+        $this->Html->script('/plugins/redactor/redactor', ['block' => true]);
+        $this->Html->script('/plugins/redactor/langs/es.js', ['block' => true]);
+        $this->Html->css('/plugins/redactor/redactor', ['block' => true]);
+
         $this->Html->script('crear.editar', ['block' => true]);
     } ?>
 
@@ -62,7 +64,7 @@
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-
+    <?= $this->fetch('script'); ?>
 </head>
 <body>
     <div id="da-wrapper">
@@ -136,14 +138,13 @@
                 </div>
             </div>
         </div>
-
         <!-- Footer -->
         <div id="da-footer">
             <div class="da-container clearfix">
                 <p>Copyright 2016. Piedica.</p>
             </div>
         </div>
-
     </div>
-    <?= $this->fetch('script'); ?>
+
+
 </body>
