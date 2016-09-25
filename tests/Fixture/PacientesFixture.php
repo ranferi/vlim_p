@@ -63,7 +63,7 @@ class PacientesFixture extends TestFixture
             'id' => 1,
             'nombre_completo' => 'Lorem ipsum dolor sit amet',
             'genero' => 'Lor',
-            'fecha_nacimiento' => '2016-09-22',
+            'fecha_nacimiento' => '2016-09-25',
             'calle_no' => 'Lorem ipsum dolor sit amet',
             'colonia' => 'Lorem ipsum dolor sit amet',
             'delegacion_municipio' => 'Lorem ipsum dolor sit amet',
@@ -84,8 +84,8 @@ class PacientesFixture extends TestFixture
             'dolor_pies' => 1,
             'notificaciones' => 1,
             'patologia' => 'Lorem ipsum dolor sit amet',
-            'created' => '2016-09-22 22:37:51',
-            'modified' => '2016-09-22 22:37:51'
+            'created' => '2016-09-25 01:19:27',
+            'modified' => '2016-09-25 01:19:27'
         ],
     ];
 }

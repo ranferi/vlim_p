@@ -39,11 +39,9 @@
                             <td class="actions da-icon-column">
                                 <?= $this->Html->link('<i class="icol-magnifier"></i>', ['action' => 'ver', $aviso->id],
                                     ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Ver Aviso', 'escape' => false]) ?>
-                                <?= $this->Html->link('<i class="icol-pencil"></i>',
-                                    ['action' => 'editar', $aviso->id],
+                                <?= $this->Html->link('<i class="icol-pencil"></i>', ['action' => 'editar', $aviso->id],
                                     ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Editar Aviso', 'escape' => false]) ?>
-                                <?= $this->Form->postLink('<i class="icol-cross"></i>',
-                                    ['action' => 'eliminar', $aviso->id],
+                                <?= $this->Form->postLink('<i class="icol-cross"></i>', ['action' => 'eliminar', $aviso->id],
                                     ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Eliminar Aviso', 'confirm' => __('¿Estás seguro de querer eliminar # {0}?', $aviso->id), 'escape' => false]) ?>
                             </td>
                         </tr>
