@@ -1,11 +1,13 @@
 /*
- * Dandelion Admin v1.0 - File Handling Demo JS
+ * Dandelion Admin v2.0 - File Handling Demo JS
  *
  * This file is part of Dandelion Admin, an Admin template build for sale at ThemeForest.
  * For questions, suggestions or support request, please mail me at maimairel@yahoo.com
  *
  * Development Started:
  * March 25, 2012
+ * Last Update:
+ * December 07, 2012
  *
  */
 
@@ -15,7 +17,19 @@
 			url : 'plugins/elfinder/connectors/php/connector.php', 
 			lang : 'en', 
 			docked : true, 
-			height: 300
+			height: 300/*, 
+			toolbar : [
+				['back', 'reload'], 
+				['select', 'open'], 
+				['quicklook', 'info', 'rename'], 
+				['resize', 'icons', 'list', 'help']
+			], 
+			contextmenu : {
+				// Commands that can be executed for current directory
+				cwd : ['reload', 'delim', 'info'], 
+				// Commands for only one selected file
+				file : ['select', 'open', 'rename'], 
+			}*/
 		});
 		
 		$("#da-ex-plupload").pluploadQueue({

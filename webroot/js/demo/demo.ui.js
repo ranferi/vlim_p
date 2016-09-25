@@ -1,11 +1,13 @@
 /*
- * Dandelion Admin v1.0 - UI Demo JS
+ * Dandelion Admin v2.0 - UI Demo JS
  *
  * This file is part of Dandelion Admin, an Admin template build for sale at ThemeForest.
  * For questions, suggestions or support request, please mail me at maimairel@yahoo.com
  *
  * Development Started:
  * March 25, 2012
+ * Last Update:
+ * December 07, 2012
  *
  */
 
@@ -23,11 +25,12 @@
 		
 		$("#da-ex-datetimepicker").datetimepicker();
 		
-		$("#da-ex-timepicker").timepicker({});
+		$("#da-ex-timepicker").timepicker();
 		
 		$(".da-ex-buttons").button();
 		
-		$("#da-ex-buttons-radio, #da-ex-buttons-checkbox").buttonset();
+		$("#da-ex-buttons-radio").buttonset();
+		$("#da-ex-buttons-checkbox").buttonset();
 		
 		$( "#da-ex-buttons-icon button:first" ).button({
 			icons: {
@@ -199,7 +202,6 @@
 			$("#da-ex-dialog-form-div").dialog("option", {modal: true}).dialog("open");
 			event.preventDefault();
 		});
-		
 		
 		/* Growl Notifications */
 		if($.jGrowl) {

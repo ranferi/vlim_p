@@ -483,9 +483,9 @@ textarea.el-rte-paste-input
 
 .el-dialogform, .el-dialogform td       { }
 .el-dialogform select                   { }
-.ui-dialog .ui-dialog-buttonpane        { padding:.4em 1em;}
+.ui-dialog .ui-dialog-buttonpane        { }
 .ui-dialog .ui-dialog-buttonpane button { }
-.ui-dialog .ui-dialog-titlebar          { padding:.4em 1em; }
+.ui-dialog .ui-dialog-titlebar          { }
 
 /* диалоговые окна */
 .el-dialogform label       { display:block; }

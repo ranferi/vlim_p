@@ -1,11 +1,13 @@
 /*
- * Dandelion Admin v1.0 - Calendar Demo JS
+ * Dandelion Admin v2.0 - Calendar Demo JS
  *
  * This file is part of Dandelion Admin, an Admin template build for sale at ThemeForest.
  * For questions, suggestions or support request, please mail me at maimairel@yahoo.com
  *
  * Development Started:
  * March 25, 2012
+ * Last Update:
+ * December 07, 2012
  *
  */
 
@@ -66,17 +68,6 @@
 	];
 	
 		$("#da-ex-calendar").fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
-			editable: true,
-			events: theEvents
-		});
-		
-		$("#da-ex-calendar-ui").fullCalendar({
-			theme: true, 
 			header: {
 				left: 'prev,next today',
 				center: 'title',

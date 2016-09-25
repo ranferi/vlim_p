@@ -3166,7 +3166,7 @@ elRTE.prototype.history = function(rte) {
  * @param height          - not used now (may be deleted in future)
  * @param lang            - interface language (requires file in i18n dir)
  * @param toolbar         - name of toolbar to load
- * @param absoluteURLs    - convert files and images urls to absolute or not
+ * @param absoluteURLs    - convert files and img urls to absolute or not
  * @param allowSource     - is source editing allowing
  * @param stripWhiteSpace - strip лишние whitespaces/tabs or not
  * @param styleWithCSS    - use style=... instead of strong etc.

@@ -31,7 +31,7 @@ class elFinder {
 		'tmbDir'       => '.tmb',       // directory name for image thumbnails. Set to "" to avoid thumbnails generation
 		'tmbCleanProb' => 1,            // how frequiently clean thumbnails dir (0 - never, 200 - every init request)
 		'tmbAtOnce'    => 5,            // number of thumbnails to generate per request
-		'tmbSize'      => 48,           // images thumbnails size (px)
+		'tmbSize'      => 48,           // img thumbnails size (px)
 		'tmbCrop'      => true,         // crop thumbnails (true - crop, false - scale image to fit thumbnail size)
 		'tmbBgColor'   => '#ffffff',    // thumbnail background color
 		'fileURL'      => true,         // display file URL in "get info"
@@ -152,7 +152,7 @@ class elFinder {
 		'sh'    => 'text/x-shellscript',
 		'pl'    => 'text/x-perl',
 		'sql'   => 'text/x-sql',
-		// images
+		// img
 		'bmp'   => 'image/x-ms-bmp',
 		'jpg'   => 'image/jpeg',
 		'jpeg'  => 'image/jpeg',
@@ -741,7 +741,7 @@ class elFinder {
 	}
 		
 	/**
-	 * Create images thumbnails 
+	 * Create img thumbnails
 	 *
 	 * @return void
 	 **/
@@ -749,7 +749,7 @@ class elFinder {
 	{
 		if (!empty($this->_options['tmbDir']) && !empty($_GET['current']) && false != ($current = $this->_findDir(trim($_GET['current'])))) {
 			$this->_result['current'] = $this->_hash($current);
-			$this->_result['images'] = array();
+			$this->_result['img'] = array();
 			$ls = scandir($current);
 			$cnt = 0;
 			$max = $this->_options['tmbAtOnce'] > 0 ? intval($this->_options['tmbAtOnce']) : 5;
@@ -762,7 +762,7 @@ class elFinder {
 							if ($cnt>=$max) {
 								return $this->_result['tmb'] = true; 
 							} elseif ($this->_tmb($path, $tmb)) {
-								$this->_result['images'][$this->_hash($path)] = $this->_path2url($tmb);
+								$this->_result['img'][$this->_hash($path)] = $this->_path2url($tmb);
 								$cnt++;
 							}
 						}

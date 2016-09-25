@@ -2761,7 +2761,7 @@
 			this.isSliding = false;
 			this.isSlideshowActive = false;
 			
-			// No looping if < 3 images
+			// No looping if < 3 img
 			if (this.cache.images.length < 3){
 				this.settings.loop = false;
 			}
@@ -5012,7 +5012,7 @@
 		var i, instance, image;
 		
 		if (Util.isNothing(images)){
-			throw 'Code.PhotoSwipe.attach: No images passed.';
+			throw 'Code.PhotoSwipe.attach: No img passed.';
 		}
 		
 		if (!Util.isLikeArray(images)){
@@ -5020,7 +5020,7 @@
 		}
 		
 		if (images.length < 1){
-			throw 'Code.PhotoSwipe.createInstance: No images to passed.';
+			throw 'Code.PhotoSwipe.createInstance: No img to passed.';
 		}
 		
 		options = Util.coalesce(options, { });

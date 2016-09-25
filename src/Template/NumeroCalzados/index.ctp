@@ -10,11 +10,9 @@
         <div class="da-panel-toolbar top">
             <ul>
                 <li>
-                    <?= $this->Html->link($this->Html->image('icons/color/add.png', ['alt' => 'Crear Aviso']) . ' ' . __('Crear'),
-                        ['action' => 'crear'],
-                        ['escape' => false]) ?>
+                    <?= $this->Html->link($this->Html->image('icons/color/add.png', ['alt' => 'Crear Talla']) . ' ' . __('Crear'),
+                        ['action' => 'crear'], ['escape' => false]) ?>
                 </li>
-
             </ul>
         </div>
         <div class="da-panel-content">
@@ -30,16 +28,23 @@
                 </thead>
 
                 <tbody>
-                <?php $count = 0; foreach ($numeroCalzados as $numeroCalzado): $tableClass = (++$count%2 ? "odd" : "even");?>
-                    <tr class="<?php echo $tableClass; ?>">
+                <?php foreach ($numeroCalzados as $numeroCalzado): ?>
+                    <tr>
                         <td><?= $this->Number->format($numeroCalzado->id) ?></td>
                         <td><?= $this->Number->format($numeroCalzado->mexicano) ?></td>
                         <td><?= $this->Number->format($numeroCalzado->italiano_millitrex) ?></td>
                         <td><?= $this->Number->format($numeroCalzado->italiano_freestep) ?></td>
                         <td class="actions da-icon-column">
-                            <?= $this->Html->link($this->Html->image('icons/color/magnifier.png', ['alt' => 'Ver']), ['action' => 'ver', $numeroCalzado->id], ['class' => 'da-tooltip-n', 'original-title' => 'Ver Aviso', 'escape' => false]) ?>
-                            <?= $this->Html->link($this->Html->image('icons/color/pencil.png', ['alt' =>'Editar']), ['action' => 'editar', $numeroCalzado->id], ['class' => 'da-tooltip-n', 'original-title' => 'Editar Aviso', 'escape' => false]) ?>
-                            <?= $this->Form->postLink($this->Html->image('icons/color/cross.png', ['alt' => 'Eliminar']), ['action' => 'eliminar', $numeroCalzado->id], [ 'class' => 'da-tooltip-n', 'original-title' => 'Eliminar Aviso', 'confirm' => __('¿Estás seguro de querer eliminar # {0}?', $numeroCalzado->id), 'escape' => false]) ?>
+                            <?= $this->Html->link($this->Html->image('icons/color/magnifier.png', ['alt' => 'Ver']),
+                                ['action' => 'ver', $numeroCalzado->id],
+                                ['class' => 'da-tooltip-n', 'original-title' => 'Ver Aviso', 'escape' => false]) ?>
+                            <?= $this->Html->link($this->Html->image('icons/color/pencil.png', ['alt' =>'Editar']),
+                                ['action' => 'editar', $numeroCalzado->id],
+                                ['class' => 'da-tooltip-n', 'original-title' => 'Editar Aviso', 'escape' => false]) ?>
+                            <?= $this->Form->postLink($this->Html->image('icons/color/cross.png', ['alt' => 'Eliminar']),
+                                ['action' => 'eliminar', $numeroCalzado->id],
+                                ['class' => 'da-tooltip-n', 'original-title' => 'Eliminar Aviso',
+                                    'confirm' => __('¿Estás seguro de querer eliminar # {0}?', $numeroCalzado->id), 'escape' => false]) ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>

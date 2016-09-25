@@ -230,8 +230,8 @@ return [
              */
             //'port' => 'non_standard_port_number',
             'username' => 'root',
-            'password' => 'vlim',
-            'database' => 'piedica',
+            'password' => 'incubo',
+            'database' => 'crm_piedica',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],

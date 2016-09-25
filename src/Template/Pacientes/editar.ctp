@@ -11,8 +11,7 @@
             <ul>
                 <li>
                     <?= $this->Html->link($this->Html->image('icons/color/text_list_bullets.png', ['alt' => 'Administrar Pacientes']) . ' ' . __('Administrar'),
-                        ['action' => 'administrar'],
-                        ['escape' => false]) ?>
+                        ['action' => 'administrar'], ['escape' => false]) ?>
                 </li>
             </ul>
         </div>
@@ -34,14 +33,9 @@
                     <div class="da-form-col-4-8">
                         <label><span class="da-tooltip-n" title="Genero *"><?= __('Genero') ?></span> <span class="required">*</span></label>
                         <ul class="da-form-list">
-                            <?php echo $this->Form->radio(
-                                'genero',
-                                [
+                            <?php echo $this->Form->radio('genero', [
                                     ['value' => 0, 'text' => 'Masculino'],
-                                    ['value' => 1, 'text' => 'Femenino'],
-                                ]
-                            ); ?>
-
+                                    ['value' => 1, 'text' => 'Femenino']]); ?>
                         </ul>
                     </div>
                     <div class="da-form-col-4-8">

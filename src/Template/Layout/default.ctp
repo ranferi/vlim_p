@@ -1,13 +1,16 @@
 <?php $cakeDescription = 'CRM Piedica'; ?>
 <!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
 <html>
 <head>
     <?= $this->Html->charset() ?>
 
-    <!-- Viewport metatags -->
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <title>
         <?= $cakeDescription ?>:
@@ -15,91 +18,64 @@
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <!-- CSS Reset -->
-    <?= $this->Html->css('reset.css') ?>
-    <!--  Fluid Grid System -->
-    <?= $this->Html->css('fluid.css') ?>
+    <!-- Bootstrap Stylesheet -->
+    <?= $this->Html->css('/bootstrap/css/bootstrap.min') ?>
+
     <!-- Theme Stylesheet -->
-    <?= $this->Html->css('dandelion.theme.css') ?>
+    <?= $this->Html->css('dandelion.theme') ?>
+    <!-- Icon Stylesheet -->
+    <?= $this->Html->css('fonts/glyphicons/style.css') ?>
     <!--  Main Stylesheet -->
     <?= $this->Html->css('dandelion.css') ?>
-    <?= $this->Html->css('demo.css') ?>
 
-    <!-- Plugin Files -->
+    <!-- JS Libs -->
+    <?= $this->Html->script('libs/jquery-1.8.3.min', ['block' => true]) ?>
+    <?= $this->Html->script('libs/jquery.mousewheel.min', ['block' => true]) ?>
 
-    <!-- FileInput Plugin -->
-    <?= $this->Html->script('jquery.fileinput', ['block' => true]) ?>
-    <!-- Placeholder Plugin -->
-    <?= $this->Html->script('jquery.placeholder', ['block' => true]) ?>
-    <!-- Mousewheel Plugin -->
-    <?= $this->Html->script('jquery.mousewheel.min', ['block' => true]) ?>
-    <!-- Scrollbar Plugin -->
-    <?= $this->Html->script('jquery.tinyscrollbar.min', ['block' => true]) ?>
-    <!-- Tooltips Plugin -->
-    <?= $this->Html->script('/plugins/tipsy/jquery.tipsy-min', ['block' => true]) ?>
-    <?= $this->Html->css('/plugins/tipsy/tipsy') ?>
-    <!-- Spinner Plugin -->
-    <?= $this->Html->script('/jui/js/jquery.ui.spinner.min', ['block' => true]) ?>
+    <!-- JS Bootstrap -->
+    <?= $this->Html->script('/bootstrap/js/bootstrap.min', ['block' => true]) ?>
 
-    <!-- WYSIWYG -->
-    <?= $this->Html->script('/plugins/elrte/js/elrte.min', ['block' => true]) ?>
-    <?= $this->Html->css('/plugins/elrte/css/elrte') ?>
+    <!-- jQuery-UI JavaScript Files -->
+    <?= $this->Html->script('/jui/js/jquery-ui-1.9.2.min', ['block' => true]) ?>
+    <?= $this->Html->script('/jui/jquery.ui.touch-punch.min', ['block' => true]) ?>
+    <?= $this->Html->css('/jui/css/jquery.ui.all') ?>
 
-    <?= $this->Html->script('/plugins/chosen/chosen.jquery', ['block' => true]) ?>
-    <?= $this->Html->css('/plugins/chosen/chosen') ?>
+    <?php if (($this->request->controller === 'Avisos' && $this->request->action === 'administrar')
+        || ($this->request->controller !== 'Avisos' && $this->request->action === 'index')) {
+        /* DataTables Plugin */
+        $this->Html->script('/plugins/datatables/jquery.dataTables.min', ['block' => true]);
+        $this->Html->script('index.administrar', ['block' => true]);
+    } else if($this->request->action === 'editar' || $this->request->action === 'crear') {
+        /* Timepicker Plugin */
+        $this->Html->script('/jui/jquery.ui.timepicker.min', ['block' => true]);
+        /* Placeholder Plugin */
+        $this->Html->script('libs/jquery.placeholder.min', ['block' => true]);
+        /* Validation Plugin */
+        $this->Html->script('/plugins/validate/jquery.validate', ['block' => true]);
+        /* elRTE Plugin */
+        $this->Html->script('/plugins/elrte/js/elrte.min', ['block' => true]);
+        $this->Html->css('/plugins/elrte/css/elrte', ['block' => true]);
+        $this->Html->script('crear.editar', ['block' => true]);
+    } ?>
 
-    <!-- Validation Plugin -->
-    <?= $this->Html->script('/plugins/validate/jquery.validate', ['block' => true]) ?>
-
-    <!-- Statistic Plugin JavaScript Files (requires metadata and excanvas for IE) -->
-    <?= $this->Html->script('jquery.metadata', ['block' => true]) ?>
-    <?= $this->Html->script('/plugins/datatables/datatables.min', ['block' => true]) ?>
-
-    <!--[if lt IE 9]>
-    <?= $this->Html->script('excanvas.js') ?>
-    <![endif]-->
-    <?= $this->Html->script('core/plugins/dandelion.circularstat.min', ['block' => true]) ?>
-
-    <!-- Wizard Plugin -->
-    <?= $this->Html->script('core/plugins/dandelion.wizard.min', ['block' => true]) ?>
-
-    <!-- Fullcalendar Plugin -->
-    <?= $this->Html->script('/plugins/fullcalendar/fullcalendar.min', ['block' => true]) ?>
-    <?= $this->Html->script('/plugins/fullcalendar/gcal', ['block' => true]) ?>
-    <?= $this->Html->css('/plugins/fullcalendar/fullcalendar') ?>
-    <?= $this->Html->css('/plugins/fullcalendar/fullcalendar.print') ?>
-
-    <!-- Load Google Chart Plugin -->
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-        // Load the Visualization API and the piechart package.
-        google.load('visualization', '1.0', {'packages':['corechart']});
-    </script>
-    <!-- Debounced resize script for preventing to many window.resize events
-          Recommended for Google Charts to perform optimally when resizing -->
-    <?= $this->Html->script('jquery.debouncedresize', ['block' => true]) ?>
-
-    <!-- Core JavaScript Files -->
-    <?= $this->Html->script('core/dandelion.core', ['block' => true]) ?>
-
-    <?= $this->Html->css('estilos.css') ?>
-
+    <?= $this->Html->script('core/dandelion.core.js', ['block' => true]) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
 
 </head>
 <body>
-    <div id="da-wrapper" class="fluid">
+    <div id="da-wrapper">
+
         <!-- Header -->
         <div id="da-header">
 
             <div id="da-header-top">
 
-                <!-- Contenedor -->
+                <!-- Container -->
                 <div class="da-container clearfix">
 
-                    <!-- Contenedor de Logo. All images put here will be vertically centere -->
+                    <!-- Logo Container. All images put here will be vertically centere -->
                     <div id="da-logo-wrap">
                         <div id="da-logo">
                             <div id="da-logo-img">
@@ -115,68 +91,59 @@
                         <?= $this->element('Header/user_profile'); ?>
                         <?= $this->element('Header/button_container'); ?>
                     </div>
+
                 </div>
             </div>
-
-            <!-- Mensaje Flash -->
             <?= $this->Flash->render() ?>
-
             <div id="da-header-bottom">
                 <!-- Container -->
                 <div class="da-container clearfix">
+
                     <!--<div id="da-search">
                         <form>
-                            <input type="text" placeholder="Search..." />
+                            <input type="text" class="search-query" placeholder="Search...">
                         </form>
                     </div>-->
+
                     <!-- Breadcrumbs -->
                     <div id="da-breadcrumb">
-                        <ul>
-                            <li class="active"><span><?= $this->Html->image('icons/black/16/home.png', ['alt' => 'Inicio']) ?>Inicio</span></li>
-                        </ul>
+                        <ul><li class="active"><a href="#"><i class="icon-home"></i> Inicio</a></li></ul>
                     </div>
+
                 </div>
             </div>
         </div>
 
         <!-- Content -->
         <div id="da-content">
+
             <!-- Container -->
             <div class="da-container clearfix">
+
                 <!-- Sidebar Separator do not remove -->
                 <div id="da-sidebar-separator"></div>
+
                 <!-- Sidebar -->
                 <div id="da-sidebar"><?= $this->element('Sidebar/main_navigation'); ?></div>
+
                 <!-- Main Content Wrapper -->
                 <div id="da-content-wrap" class="clearfix">
+
                     <!-- Content Area -->
                     <div id="da-content-area">
                         <?= $this->fetch('content') ?>
-                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!-- Footer -->
         <div id="da-footer">
             <div class="da-container clearfix">
-                <p>Copyright 2016. Piedica.
+                <p>Copyright 2016. Piedica.</p>
             </div>
         </div>
+
     </div>
-
-
-    <!-- jQuery JavaScript File -->
-    <?= $this->Html->script('jquery-1.7.2.min') ?>
-
-    <!-- jQuery-UI JavaScript Files -->
-    <?= $this->Html->script('/jui/js/jquery-ui-1.8.20.min') ?>
-    <?= $this->Html->script('/jui/js/jquery.ui.timepicker.min') ?>
-    <?= $this->Html->script('/jui/js/jquery.ui.touch-punch.min') ?>
-    <?= $this->Html->css('/jui/css/jquery.ui.all.css') ?>
-    <?= $this->Html->script('scripts', array('inline' => false)) ?>
-    <?= $this->fetch('script') ?>
+    <?= $this->fetch('script'); ?>
 </body>
-</html>

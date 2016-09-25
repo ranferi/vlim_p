@@ -38,8 +38,6 @@ class AppView extends View
     {
         parent::initialize();
         $this->loadHelper('Paginator', ['templates' => 'paginator-templates']);
-        if ($this->request->action === 'administrar') {
 
-        }
     }
 }
