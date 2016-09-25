@@ -38,6 +38,7 @@ class AppView extends View
     {
         parent::initialize();
         $this->loadHelper('Paginator', ['templates' => 'paginator-templates']);
+        $this->loadHelper('Form', ['templates' => 'form-templates']);
 
     }
 }

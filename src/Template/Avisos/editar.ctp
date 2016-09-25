@@ -21,9 +21,7 @@
                 </div>
             </div>
             <div class="da-panel-content da-form-container">
-                <div class="da-message info">
-                    Campos con <span class="required">*</span> son requeridos.
-                </div>
+                <div class="da-message info">Campos con <span class="required">*</span> son requeridos.</div>
                 <?= $this->Form->create($aviso, ['class' => 'da-form']) ?>
                     <div class="da-form-inline">
                         <div class="da-form-row">

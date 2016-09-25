@@ -57,6 +57,6 @@ fabric.properties
 
 #/vendor/*
 #/config/app.php
-#/tmp/*
-#/logs/*
+/tmp/*
+/logs/*
 

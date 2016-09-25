@@ -21,7 +21,13 @@
             $('#mensaje').elrte(options);
         }
 
-        $("#da-ex-datetimepicker").datetimepicker();
+        $("#da-ex-datetimepicker").datetimepicker({
+            beforeShow: function() {
+                setTimeout(function(){
+                    $('#ui-datepicker-div').css('z-index', 2000);
+                }, 0);
+            }
+        });
 
         if($.fn.spinner) {
             var opts = {
