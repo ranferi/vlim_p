@@ -41,7 +41,10 @@
     <?= $this->Html->css('/jui/css/jquery.ui.all') ?>
 
     <?php if (($this->request->controller === 'Avisos' && $this->request->action === 'administrar')
-        || ($this->request->controller !== 'Avisos' && $this->request->action === 'index')) {
+        || ($this->request->controller !== 'Avisos' && $this->request->action === 'index')
+        || ($this->request->controller === 'Usuarios' &&
+            ($this->request->action === 'produccion' || $this->request->action === 'control'
+                || $this->request->action === 'vendedores' || $this->request->action === 'diseniadores'))) {
         /* DataTables Plugin */
         $this->Html->script('/plugins/datatables/jquery.dataTables.min', ['block' => true]);
         $this->Html->script('index.administrar', ['block' => true]);

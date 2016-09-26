@@ -103,7 +103,7 @@ class RecubrimientosController extends AppController
         if ($this->Recubrimientos->delete($recubrimiento)) {
             $this->Flash->success(__('El recubrimiento ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('El recubrimiento ser eliminado. Por favor, intenta de nuevo.'));
+            $this->Flash->error(__('El recubrimiento no ha podido ser eliminado. Por favor, intenta de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

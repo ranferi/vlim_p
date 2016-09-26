@@ -28,13 +28,13 @@ class SucursalsController extends AppController
     }
 
     /**
-     * View method
+     * Ver method
      *
      * @param string|null $id Sucursal id.
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function ver($id = null)
     {
         $sucursal = $this->Sucursals->get($id, [
             'contain' => ['Softwares', 'Empresas', 'Usuarios']
@@ -45,21 +45,21 @@ class SucursalsController extends AppController
     }
 
     /**
-     * Add method
+     * Crear method
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function crear()
     {
         $sucursal = $this->Sucursals->newEntity();
         if ($this->request->is('post')) {
             $sucursal = $this->Sucursals->patchEntity($sucursal, $this->request->data);
             if ($this->Sucursals->save($sucursal)) {
-                $this->Flash->success(__('The sucursal has been saved.'));
+                $this->Flash->success(__('La sucursal se ha guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The sucursal could not be saved. Please, try again.'));
+                $this->Flash->error(__('La sucursal no ha podido ser guardado. Por favor, intenta de nuevo.'));
             }
         }
         $softwares = $this->Sucursals->Softwares->find('list', ['limit' => 200]);
@@ -69,13 +69,13 @@ class SucursalsController extends AppController
     }
 
     /**
-     * Edit method
+     * Editar method
      *
      * @param string|null $id Sucursal id.
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function editar($id = null)
     {
         $sucursal = $this->Sucursals->get($id, [
             'contain' => []
@@ -83,11 +83,11 @@ class SucursalsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $sucursal = $this->Sucursals->patchEntity($sucursal, $this->request->data);
             if ($this->Sucursals->save($sucursal)) {
-                $this->Flash->success(__('The sucursal has been saved.'));
+                $this->Flash->success(__('La sucursal se ha guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The sucursal could not be saved. Please, try again.'));
+                $this->Flash->error(__('La sucursal no ha podido ser guardado. Por favor, intenta de nuevo.'));
             }
         }
         $softwares = $this->Sucursals->Softwares->find('list', ['limit' => 200]);
@@ -97,20 +97,20 @@ class SucursalsController extends AppController
     }
 
     /**
-     * Delete method
+     * Eliminar method
      *
      * @param string|null $id Sucursal id.
      * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    public function eliminar($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $sucursal = $this->Sucursals->get($id);
         if ($this->Sucursals->delete($sucursal)) {
-            $this->Flash->success(__('The sucursal has been deleted.'));
+            $this->Flash->success(__('La sucursal ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('The sucursal could not be deleted. Please, try again.'));
+            $this->Flash->error(__('La sucursal no ha podido ser eliminado. Por favor, intenta de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

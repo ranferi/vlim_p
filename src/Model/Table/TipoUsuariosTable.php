@@ -33,7 +33,7 @@ class TipoUsuariosTable extends Table
         parent::initialize($config);
 
         $this->table('tipo_usuarios');
-        $this->displayField('id');
+        $this->displayField('tipo_usuario');
         $this->primaryKey('id');
 
         $this->hasMany('Usuarios', [

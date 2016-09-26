@@ -120,7 +120,7 @@ class PedidosController extends AppController
         if ($this->Pedidos->delete($pedido)) {
             $this->Flash->success(__('El pedido ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('El pedido ser eliminado. Por favor, intenta de nuevo.'));
+            $this->Flash->error(__('El pedido no ha podido ser eliminado. Por favor, intenta de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

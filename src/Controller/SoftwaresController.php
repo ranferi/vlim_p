@@ -103,7 +103,7 @@ class SoftwaresController extends AppController
         if ($this->Softwares->delete($software)) {
             $this->Flash->success(__('El tipo de software ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('El tipo de software ser eliminado. Por favor, intenta de nuevo.'));
+            $this->Flash->error(__('El tipo de software no ha podido ser eliminado. Por favor, intenta de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

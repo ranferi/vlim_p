@@ -103,7 +103,7 @@ class ParametrosController extends AppController
         if ($this->Parametros->delete($parametro)) {
             $this->Flash->success(__('El parametro ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('El parametro ser eliminado. Por favor, intenta de nuevo.'));
+            $this->Flash->error(__('El parametro no ha podido ser eliminado. Por favor, intenta de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

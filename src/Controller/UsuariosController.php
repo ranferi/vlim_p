@@ -28,13 +28,13 @@ class UsuariosController extends AppController
     }
 
     /**
-     * View method
+     * Ver method
      *
      * @param string|null $id Usuario id.
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function ver($id = null)
     {
         $usuario = $this->Usuarios->get($id, [
             'contain' => ['TipoUsuarios', 'Empresas', 'Sucursals']
@@ -45,21 +45,21 @@ class UsuariosController extends AppController
     }
 
     /**
-     * Add method
+     * Crear method
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function crear()
     {
         $usuario = $this->Usuarios->newEntity();
         if ($this->request->is('post')) {
             $usuario = $this->Usuarios->patchEntity($usuario, $this->request->data);
             if ($this->Usuarios->save($usuario)) {
-                $this->Flash->success(__('The usuario has been saved.'));
+                $this->Flash->success(__('El usuario se ha guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The usuario could not be saved. Please, try again.'));
+                $this->Flash->error(__('El usuario no ha podido ser guardado. Por favor, intenta de nuevo.'));
             }
         }
         $tipoUsuarios = $this->Usuarios->TipoUsuarios->find('list', ['limit' => 200]);
@@ -70,13 +70,13 @@ class UsuariosController extends AppController
     }
 
     /**
-     * Edit method
+     * Editar method
      *
      * @param string|null $id Usuario id.
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function editar($id = null)
     {
         $usuario = $this->Usuarios->get($id, [
             'contain' => []
@@ -84,11 +84,11 @@ class UsuariosController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $usuario = $this->Usuarios->patchEntity($usuario, $this->request->data);
             if ($this->Usuarios->save($usuario)) {
-                $this->Flash->success(__('The usuario has been saved.'));
+                $this->Flash->success(__('El usuario se ha guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The usuario could not be saved. Please, try again.'));
+                $this->Flash->error(__('El usuario no ha podido ser guardado. Por favor, intenta de nuevo.'));
             }
         }
         $tipoUsuarios = $this->Usuarios->TipoUsuarios->find('list', ['limit' => 200]);
@@ -99,20 +99,108 @@ class UsuariosController extends AppController
     }
 
     /**
-     * Delete method
+     * Diseniadores method
+     *
+     * @return \Cake\Network\Response|null
+     */
+    public function diseniadores() {
+        $titulo = 'Diseñadores';
+        $this->paginate = [
+            'contain' => ['TipoUsuarios', 'Empresas', 'Sucursals']
+        ];
+        $usuariosQuery = $this->Usuarios
+            ->find()
+            ->where(['tipo_usuario_id =' => 4]);
+        $usuarios = $this->paginate($usuariosQuery);
+
+        $this->set(compact('usuarios'));
+        $this->set('_serialize', ['usuarios']);
+
+        $this->render('index');
+    }
+
+    /**
+     * Vendedores method
+     *
+     * @return \Cake\Network\Response|null
+     */
+    public function vendedores() {
+        $titulo = 'Vendedores';
+        $this->paginate = [
+            'contain' => ['TipoUsuarios', 'Empresas', 'Sucursals']
+        ];
+        $usuariosQuery = $this->Usuarios
+            ->find()
+            ->where(['tipo_usuario_id =' => 5]);
+        $usuarios = $this->paginate($usuariosQuery);
+
+        $this->set(compact('usuarios'));
+        $this->set('_serialize', ['usuarios']);
+
+        $this->set(compact('titulo'));
+        $this->render('index');
+    }
+
+    /**
+     * Control method
+     *
+     * @return \Cake\Network\Response|null
+     */
+    public function control() {
+        $titulo = 'Vendedores';
+        $this->paginate = [
+            'contain' => ['TipoUsuarios', 'Empresas', 'Sucursals']
+        ];
+        $usuariosQuery = $this->Usuarios
+            ->find()
+            ->where(['tipo_usuario_id =' => 3]);
+        $usuarios = $this->paginate($usuariosQuery);
+
+        $this->set(compact('usuarios'));
+        $this->set('_serialize', ['usuarios']);
+
+        $this->set(compact('titulo'));
+        $this->render('index');
+    }
+
+    /**
+     * Produccion method
+     *
+     * @return \Cake\Network\Response|null
+     */
+    public function produccion() {
+        $titulo = 'Vendedores';
+        $this->paginate = [
+            'contain' => ['TipoUsuarios', 'Empresas', 'Sucursals']
+        ];
+        $usuariosQuery = $this->Usuarios
+            ->find()
+            ->where(['tipo_usuario_id =' => 6]);
+        $usuarios = $this->paginate($usuariosQuery);
+
+        $this->set(compact('usuarios'));
+        $this->set('_serialize', ['usuarios']);
+
+        $this->set(compact('titulo'));
+        $this->render('index');
+    }
+
+
+    /**
+     * Eliminar method
      *
      * @param string|null $id Usuario id.
      * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    public function eliminar($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $usuario = $this->Usuarios->get($id);
         if ($this->Usuarios->delete($usuario)) {
-            $this->Flash->success(__('The usuario has been deleted.'));
+            $this->Flash->success(__('El usuario ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('The usuario could not be deleted. Please, try again.'));
+            $this->Flash->error(__('El usuario no ha podido ser eliminado. Por favor, intenta de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

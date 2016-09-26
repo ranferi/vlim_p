@@ -35,7 +35,7 @@ class SoftwaresTable extends Table
         parent::initialize($config);
 
         $this->table('softwares');
-        $this->displayField('id');
+        $this->displayField('tipo_software');
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');

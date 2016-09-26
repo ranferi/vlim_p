@@ -8,7 +8,7 @@
             <div class="da-panel-toolbar">
                 <div class="btn-toolbar">
                     <div class="btn-group">
-                        <?= $this->Html->link('<i class="icol-add"></i>' . ' ' . __('Crear'),
+                        <?= $this->Html->link('<i class="icol-add"></i> ' . __('Crear'),
                             ['action' => 'crear'], ['class' => 'btn', 'escape' => false]) ?>
                     </div>
                 </div>

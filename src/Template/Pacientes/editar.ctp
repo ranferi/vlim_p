@@ -8,14 +8,14 @@
             <div class="da-panel-toolbar">
                 <div class="btn-toolbar">
                     <div class="btn-group">
-                        <?= $this->Html->link('<i class="icol-magnifier"></i>' . ' ' . __('Ver'),
+                        <?= $this->Html->link('<i class="icol-magnifier"></i> ' . __('Ver'),
                             ['action' => 'ver', $paciente->id], ['class' => 'btn', 'escape' => false]) ?>
-                        <?= $this->Form->postLink('<i class="icol-cross"></i>' . ' ' . __('Eliminar'),
+                        <?= $this->Form->postLink('<i class="icol-cross"></i> ' . __('Eliminar'),
                             ['action' => 'eliminar', $paciente->id],
                             ['class' => 'btn', 'confirm' => __('¿Estás seguro de querer eliminar # {0}?', $paciente->id), 'escape' => false]) ?>
-                        <?= $this->Html->link('<i class="icol-add"></i>' . ' ' . __('Crear'),
+                        <?= $this->Html->link('<i class="icol-add"></i> ' . __('Crear'),
                             ['action' => 'crear'], ['class' => 'btn', 'escape' => false]) ?>
-                        <?= $this->Html->link('<i class="icol-text-list-bullets"></i>' . ' ' . __('Administrar'),
+                        <?= $this->Html->link('<i class="icol-text-list-bullets"></i> ' . __('Administrar'),
                             ['action' => 'index'], ['class' => 'btn', 'escape' => false]) ?>
                     </div>
                 </div>

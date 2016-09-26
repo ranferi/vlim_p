@@ -37,7 +37,7 @@ class SucursalsTable extends Table
         parent::initialize($config);
 
         $this->table('sucursals');
-        $this->displayField('id');
+        $this->displayField('nombre_sucursal');
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');

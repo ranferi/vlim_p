@@ -108,7 +108,7 @@ class ProductosController extends AppController
         if ($this->Productos->delete($producto)) {
             $this->Flash->success(__('El producto ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('El producto ser eliminado. Por favor, intenta de nuevo.'));
+            $this->Flash->error(__('El producto no ha podido ser eliminado. Por favor, intenta de nuevo.'));
         }
 
 

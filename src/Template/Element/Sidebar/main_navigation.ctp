@@ -57,9 +57,11 @@
         <li>
             <a href="#">
                 <span class="da-nav-icon"><i class="icon-user"></i></span>
-                Mi Perfil
+                <?= __('Mi Perfil') ?>
             </a>
-
+            <ul class="closed">
+                <li><?= $this->Html->link(__('Editar mi Perfil'), ['controller' => 'Productos', 'action' => 'ver', 1]) ?></li>
+            </ul>
         </li>
         <li>
             <a href="#"><span class="da-nav-icon"><i class="icon-blog"></i></span>
@@ -89,9 +91,17 @@
             </ul>-->
         </li>
         <li>
-            <a href="#"><span class="da-nav-icon"><i class="icon-database-plus"></i></span></span>
-                Usuarios
+            <a href="#"><span class="da-nav-icon"><i class="icon-database-plus"></i></span>
+                <?= __('Usuarios') ?>
             </a>
+            <ul class="closed">
+                <li><?= $this->Html->link(__('General'), ['controller' => 'Usuarios', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Diseñadores'), ['controller' => 'Usuarios', 'action' => 'diseniadores']) ?></li>
+                <li><?= $this->Html->link(__('Sucursales'), ['controller' => 'Sucursals', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Vendedores'), ['controller' => 'Usuarios', 'action' => 'vendedores']) ?></li>
+                <li><?= $this->Html->link(__('Control'), ['controller' => 'Usuarios', 'action' => 'control']) ?></li>
+                <li><?= $this->Html->link(__('Producción'), ['controller' => 'Usuarios', 'action' => 'produccion']) ?></li>
+            </ul>
         </li>
     </ul>
 </div>
