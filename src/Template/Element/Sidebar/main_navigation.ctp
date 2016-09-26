@@ -29,14 +29,19 @@
                 <li><?= $this->Html->link(__('Tallas'), ['controller' => 'NumeroCalzados', 'action' => 'index']) ?></li>
                 <li><?= $this->Html->link(__('Materiales'), ['controller' => 'Materiales', 'action' => 'index']) ?></li>
                 <li><?= $this->Html->link(__('Tipo de Software'), ['controller' => 'Softwares', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Recubrimientos'), ['controller' => 'Recubrimientos', 'action' => 'index']) ?></li>
             </ul>
         </li>
         <li>
             <a href="#">
                 <!-- Icon Container -->
                 <span class="da-nav-icon"><i class="icon-settings"></i></span>
-                Parametros
+                <?= __('Parametros') ?>
             </a>
+            <ul class="closed">
+                <li><?= $this->Html->link(__('Crear'), ['controller' => 'Parametros', 'action' => 'crear']) ?></li>
+                <li><?= $this->Html->link(__('Administrar'), ['controller' => 'Parametros', 'action' => 'index']) ?></li>
+            </ul>
         </li>
         <li>
             <a href="#">
@@ -58,13 +63,21 @@
         </li>
         <li>
             <a href="#"><span class="da-nav-icon"><i class="icon-blog"></i></span>
-                Productos
+                <?= __('Productos') ?>
             </a>
+            <ul class="closed">
+                <li><?= $this->Html->link(__('Crear'), ['controller' => 'Productos', 'action' => 'crear']) ?></li>
+                <li><?= $this->Html->link(__('Administrar'), ['controller' => 'Productos', 'action' => 'index']) ?></li>
+            </ul>
         </li>
         <li>
             <a href="#"><span class="da-nav-icon"><i class="icon-more-windows"></i></span>
-                Categorías de Productos
+                <?= __('Categorías de Productos') ?>
             </a>
+            <ul class="closed">
+                <li><?= $this->Html->link(__('Crear'), ['controller' => 'CategoriaProductos', 'action' => 'crear']) ?></li>
+                <li><?= $this->Html->link(__('Administrar'), ['controller' => 'CategoriaProductos', 'action' => 'index']) ?></li>
+            </ul>
         </li>
         <li>
             <a href="#"><span class="da-nav-icon"><i class="icon-notes-2"></i></span>

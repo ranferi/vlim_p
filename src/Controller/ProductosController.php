@@ -28,13 +28,13 @@ class ProductosController extends AppController
     }
 
     /**
-     * View method
+     * Ver method
      *
      * @param string|null $id Producto id.
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function ver($id = null)
     {
         $producto = $this->Productos->get($id, [
             'contain' => ['CategoriaProductos']
@@ -45,11 +45,11 @@ class ProductosController extends AppController
     }
 
     /**
-     * Add method
+     * Crear method
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function crear()
     {
         $producto = $this->Productos->newEntity();
         if ($this->request->is('post')) {
@@ -68,13 +68,13 @@ class ProductosController extends AppController
     }
 
     /**
-     * Edit method
+     * Editar method
      *
      * @param string|null $id Producto id.
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function editar($id = null)
     {
         $producto = $this->Productos->get($id, [
             'contain' => []
@@ -82,11 +82,11 @@ class ProductosController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $producto = $this->Productos->patchEntity($producto, $this->request->data);
             if ($this->Productos->save($producto)) {
-                $this->Flash->success(__('The producto has been saved.'));
+                $this->Flash->success(__('El producto se ha guardado.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The producto could not be saved. Please, try again.'));
+                $this->Flash->error(__('El producto no ha podido ser guardado. Por favor, intenta de nuevo.'));
             }
         }
         $categoriaProductos = $this->Productos->CategoriaProductos->find('list', ['limit' => 200]);
@@ -95,21 +95,22 @@ class ProductosController extends AppController
     }
 
     /**
-     * Delete method
+     * Eliminar method
      *
      * @param string|null $id Producto id.
      * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    public function eliminar($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $producto = $this->Productos->get($id);
         if ($this->Productos->delete($producto)) {
-            $this->Flash->success(__('The producto has been deleted.'));
+            $this->Flash->success(__('El producto ha sido eliminado.'));
         } else {
-            $this->Flash->error(__('The producto could not be deleted. Please, try again.'));
+            $this->Flash->error(__('El producto ser eliminado. Por favor, intenta de nuevo.'));
         }
+
 
         return $this->redirect(['action' => 'index']);
     }

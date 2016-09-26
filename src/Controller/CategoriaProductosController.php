@@ -28,13 +28,13 @@ class CategoriaProductosController extends AppController
     }
 
     /**
-     * View method
+     * Ver method
      *
      * @param string|null $id Categoria Producto id.
      * @return \Cake\Network\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+    public function ver($id = null)
     {
         $categoriaProducto = $this->CategoriaProductos->get($id, [
             'contain' => ['TipoProductos', 'Productos']
@@ -45,21 +45,21 @@ class CategoriaProductosController extends AppController
     }
 
     /**
-     * Add method
+     * Crear method
      *
      * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function crear()
     {
         $categoriaProducto = $this->CategoriaProductos->newEntity();
         if ($this->request->is('post')) {
             $categoriaProducto = $this->CategoriaProductos->patchEntity($categoriaProducto, $this->request->data);
             if ($this->CategoriaProductos->save($categoriaProducto)) {
-                $this->Flash->success(__('The categoria producto has been saved.'));
+                $this->Flash->success(__('La categoría de productos se ha guardada.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The categoria producto could not be saved. Please, try again.'));
+                $this->Flash->error(__('La categoría de productos no ha podido ser guardadoa. Por favor, intenta de nuevo.'));
             }
         }
         $tipoProductos = $this->CategoriaProductos->TipoProductos->find('list', ['limit' => 200]);
@@ -68,13 +68,13 @@ class CategoriaProductosController extends AppController
     }
 
     /**
-     * Edit method
+     * Editar method
      *
      * @param string|null $id Categoria Producto id.
      * @return \Cake\Network\Response|void Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function editar($id = null)
     {
         $categoriaProducto = $this->CategoriaProductos->get($id, [
             'contain' => []
@@ -82,11 +82,11 @@ class CategoriaProductosController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $categoriaProducto = $this->CategoriaProductos->patchEntity($categoriaProducto, $this->request->data);
             if ($this->CategoriaProductos->save($categoriaProducto)) {
-                $this->Flash->success(__('The categoria producto has been saved.'));
+                $this->Flash->success(__('La categoría de productos se ha guardada.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('The categoria producto could not be saved. Please, try again.'));
+                $this->Flash->error(__('La categoría de productos no ha podido ser guardadoa. Por favor, intenta de nuevo.'));
             }
         }
         $tipoProductos = $this->CategoriaProductos->TipoProductos->find('list', ['limit' => 200]);
@@ -95,20 +95,20 @@ class CategoriaProductosController extends AppController
     }
 
     /**
-     * Delete method
+     * Eliminar method
      *
      * @param string|null $id Categoria Producto id.
      * @return \Cake\Network\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    public function eliminar($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $categoriaProducto = $this->CategoriaProductos->get($id);
         if ($this->CategoriaProductos->delete($categoriaProducto)) {
-            $this->Flash->success(__('The categoria producto has been deleted.'));
+            $this->Flash->success(__('La categoría de productos ha sido eliminada.'));
         } else {
-            $this->Flash->error(__('The categoria producto could not be deleted. Please, try again.'));
+            $this->Flash->error(__('La categoría de productos ser eliminada. Por favor, intenta de nuevo.'));
         }
 
         return $this->redirect(['action' => 'index']);

@@ -8,7 +8,7 @@
             <div class="da-panel-toolbar">
                 <div class="btn-toolbar">
                     <div class="btn-group">
-                        <?= $this->Html->link('<i class="icol-add"></i>' . ' ' . __('Crear'),
+                        <?= $this->Html->link('<i class="icol-add"></i> ' .  __('Crear'),
                             ['action' => 'crear'], ['class' => 'btn', 'escape' => false]) ?>
                     </div>
                 </div>
@@ -30,11 +30,11 @@
                             <td><?= h($materiale->nombre) ?></td>
                             <td class="actions da-icon-column">
                                 <?= $this->Html->link('<i class="icol-magnifier"></i>', ['action' => 'ver', $materiale->id],
-                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Ver Material de Calzado', 'escape' => false]) ?>
+                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Ver Material', 'escape' => false]) ?>
                                 <?= $this->Html->link('<i class="icol-pencil"></i>', ['action' => 'editar', $materiale->id],
-                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Editar Material de Calzado', 'escape' => false]) ?>
+                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Editar Material', 'escape' => false]) ?>
                                 <?= $this->Form->postLink('<i class="icol-cross"></i>', ['action' => 'eliminar', $materiale->id],
-                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Eliminar Material de Calzado', 'confirm' => __('¿Estás seguro de querer eliminar # {0}?', $materiale->id), 'escape' => false]) ?>
+                                    ['data-placement' => 'bottom', 'rel' => 'tooltip', 'title' => 'Eliminar Material', 'confirm' => __('¿Estás seguro de querer eliminar # {0}?', $materiale->id), 'escape' => false]) ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

@@ -4,7 +4,7 @@
             sPaginationType: "full_numbers",
             "oLanguage": {
                 "sLengthMenu": "Mostrando _MENU_ resultados por página",
-                "sZeroRecords": "No se ha encontado nada - disculpa",
+                "sZeroRecords": "No se ha encontrado nada - disculpa",
                 "sInfo": "Mostrando _START_ de _END_ de un total de _TOTAL_ resultados",
                 "sInfoEmpty": "No hay resultados disponibles",
                 "sInfoFiltered": "(filtrados de _MAX_ resultados en total)",
