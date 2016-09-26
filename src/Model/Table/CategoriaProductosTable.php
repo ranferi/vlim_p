@@ -36,7 +36,7 @@ class CategoriaProductosTable extends Table
         parent::initialize($config);
 
         $this->table('categoria_productos');
-        $this->displayField('id');
+        $this->displayField('nombre');
         $this->primaryKey('id');
 
         $this->addBehavior('Timestamp');

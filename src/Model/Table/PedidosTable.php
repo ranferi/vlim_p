@@ -11,7 +11,7 @@ use Cake\Validation\Validator;
  *
  * @property \Cake\ORM\Association\BelongsTo $Pacientes
  * @property \Cake\ORM\Association\BelongsTo $Sucursals
- * @property \Cake\ORM\Association\BelongsTo $Etapas
+ * @property \Cake\ORM\Association\BelongsTo $TipoEtapas
  * @property \Cake\ORM\Association\BelongsTo $Estudios
  * @property \Cake\ORM\Association\BelongsTo $Vendedors
  * @property \Cake\ORM\Association\BelongsTo $TipoProductos
@@ -55,8 +55,8 @@ class PedidosTable extends Table
         $this->belongsTo('Sucursals', [
             'foreignKey' => 'sucursal_id'
         ]);
-        $this->belongsTo('Etapas', [
-            'foreignKey' => 'etapa_id'
+        $this->belongsTo('TipoEtapas', [
+            'foreignKey' => 'tipo_etapa_id'
         ]);
         $this->belongsTo('Estudios', [
             'foreignKey' => 'estudio_id'
@@ -124,7 +124,7 @@ class PedidosTable extends Table
     {
         $rules->add($rules->existsIn(['paciente_id'], 'Pacientes'));
         $rules->add($rules->existsIn(['sucursal_id'], 'Sucursals'));
-        $rules->add($rules->existsIn(['etapa_id'], 'Etapas'));
+        $rules->add($rules->existsIn(['tipo_etapa_id'], 'TipoEtapas'));
         $rules->add($rules->existsIn(['estudio_id'], 'Estudios'));
         $rules->add($rules->existsIn(['vendedor_id'], 'Vendedors'));
         $rules->add($rules->existsIn(['tipo_producto_id'], 'TipoProductos'));

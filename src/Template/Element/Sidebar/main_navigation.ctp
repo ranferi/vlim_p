@@ -47,19 +47,19 @@
             <a href="#">
                 <!-- Icon Container -->
                 <span class="da-nav-icon"><i class="icon-cart-in"></i></span>
-                Pedidos
+                <?= __('Pedidos') ?>
             </a>
+            <ul class="closed">
+                <li><?= $this->Html->link(__('Crear'), ['controller' => 'Pedidos', 'action' => 'crear']) ?></li>
+                <li><?= $this->Html->link(__('Administrar'), ['controller' => 'Pedidos', 'action' => 'index']) ?></li>
+            </ul>
         </li>
         <li>
             <a href="#">
                 <span class="da-nav-icon"><i class="icon-user"></i></span>
                 Mi Perfil
             </a>
-            <!--<ul class="closed">
-                <li><a href="#">Layouts</a></li>
-                <li><a href="#">Elements</a></li>
-                <li><a href="#">Validation</a></li>
-            </ul>-->
+
         </li>
         <li>
             <a href="#"><span class="da-nav-icon"><i class="icon-blog"></i></span>

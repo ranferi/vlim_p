@@ -9,10 +9,16 @@
         <li><?= $this->Html->link(__('New Paciente'), ['controller' => 'Pacientes', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Sucursals'), ['controller' => 'Sucursals', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Sucursal'), ['controller' => 'Sucursals', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Tipo Etapas'), ['controller' => 'TipoEtapas', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Tipo Etapa'), ['controller' => 'TipoEtapas', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Vendedors'), ['controller' => 'Vendedors', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Vendedor'), ['controller' => 'Vendedors', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Tipo Productos'), ['controller' => 'TipoProductos', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Tipo Producto'), ['controller' => 'TipoProductos', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Numero Calzados'), ['controller' => 'NumeroCalzados', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Numero Calzado'), ['controller' => 'NumeroCalzados', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Diseniadors'), ['controller' => 'Diseniadors', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Diseniador'), ['controller' => 'Diseniadors', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Estudios'), ['controller' => 'Estudios', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Estudio'), ['controller' => 'Estudios', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Disenios'), ['controller' => 'Disenios', 'action' => 'index']) ?> </li>
@@ -39,20 +45,28 @@
             <td><?= $pedido->has('sucursal') ? $this->Html->link($pedido->sucursal->id, ['controller' => 'Sucursals', 'action' => 'view', $pedido->sucursal->id]) : '' ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Tipo Etapa') ?></th>
+            <td><?= $pedido->has('tipo_etapa') ? $this->Html->link($pedido->tipo_etapa->id, ['controller' => 'TipoEtapas', 'action' => 'view', $pedido->tipo_etapa->id]) : '' ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Estudio Id') ?></th>
             <td><?= h($pedido->estudio_id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Vendedor Id') ?></th>
-            <td><?= h($pedido->vendedor_id) ?></td>
+            <th scope="row"><?= __('Vendedor') ?></th>
+            <td><?= $pedido->has('vendedor') ? $this->Html->link($pedido->vendedor->id, ['controller' => 'Vendedors', 'action' => 'view', $pedido->vendedor->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Tipo Producto') ?></th>
-            <td><?= $pedido->has('tipo_producto') ? $this->Html->link($pedido->tipo_producto->id, ['controller' => 'TipoProductos', 'action' => 'view', $pedido->tipo_producto->id]) : '' ?></td>
+            <td><?= $pedido->has('tipo_producto') ? $this->Html->link($pedido->tipo_producto->nombre, ['controller' => 'TipoProductos', 'action' => 'view', $pedido->tipo_producto->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Numero Calzado') ?></th>
             <td><?= $pedido->has('numero_calzado') ? $this->Html->link($pedido->numero_calzado->id, ['controller' => 'NumeroCalzados', 'action' => 'view', $pedido->numero_calzado->id]) : '' ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Diseniador') ?></th>
+            <td><?= $pedido->has('diseniador') ? $this->Html->link($pedido->diseniador->id, ['controller' => 'Diseniadors', 'action' => 'view', $pedido->diseniador->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
@@ -61,14 +75,6 @@
         <tr>
             <th scope="row"><?= __('Total') ?></th>
             <td><?= $this->Number->format($pedido->total) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Etapa Id') ?></th>
-            <td><?= $this->Number->format($pedido->etapa_id) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Diseniador Id') ?></th>
-            <td><?= $this->Number->format($pedido->diseniador_id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Estudio Id Diseniador') ?></th>

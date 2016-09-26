@@ -13,7 +13,7 @@ use Cake\ORM\Entity;
  * @property float $total
  * @property int $paciente_id
  * @property int $sucursal_id
- * @property int $etapa_id
+ * @property int $tipo_etapa_id
  * @property string $estudio_id
  * @property string $vendedor_id
  * @property int $tipo_producto_id
@@ -25,7 +25,7 @@ use Cake\ORM\Entity;
  *
  * @property \App\Model\Entity\Paciente $paciente
  * @property \App\Model\Entity\Sucursal $sucursal
- * @property \App\Model\Entity\Etapa $etapa
+ * @property \App\Model\Entity\TipoEtapa $tipo_etapa
  * @property \App\Model\Entity\Estudio[] $estudios
  * @property \App\Model\Entity\Vendedor $vendedor
  * @property \App\Model\Entity\TipoProducto $tipo_producto

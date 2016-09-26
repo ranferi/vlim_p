@@ -19,7 +19,7 @@ class PedidosController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Pacientes', 'Sucursals', 'TipoEtapas', 'Vendedors', 'TipoProductos', 'NumeroCalzados', 'Diseniadors']
+            'contain' => ['Pacientes', 'Sucursals', 'Etapas', 'Vendedors', 'TipoProductos', 'NumeroCalzados', 'Diseniadors']
         ];
         $pedidos = $this->paginate($this->Pedidos);
 
@@ -37,7 +37,7 @@ class PedidosController extends AppController
     public function ver($id = null)
     {
         $pedido = $this->Pedidos->get($id, [
-            'contain' => ['Pacientes', 'Sucursals', 'TipoEtapas', 'Vendedors', 'TipoProductos', 'NumeroCalzados', 'Diseniadors', 'Estudios', 'Disenios']
+            'contain' => ['Pacientes', 'Sucursals', 'Etapas', 'Vendedors', 'TipoProductos', 'NumeroCalzados', 'Diseniadors', 'Estudios', 'Disenios']
         ]);
 
         $this->set('pedido', $pedido);
@@ -55,21 +55,21 @@ class PedidosController extends AppController
         if ($this->request->is('post')) {
             $pedido = $this->Pedidos->patchEntity($pedido, $this->request->data);
             if ($this->Pedidos->save($pedido)) {
-                $this->Flash->success(__('El pedido se ha guardado.'));
+                $this->Flash->success(__('The pedido has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('El pedido no ha podido ser guardado. Por favor, intenta de nuevo.'));
+                $this->Flash->error(__('The pedido could not be saved. Please, try again.'));
             }
         }
         $pacientes = $this->Pedidos->Pacientes->find('list', ['limit' => 200]);
         $sucursals = $this->Pedidos->Sucursals->find('list', ['limit' => 200]);
-        $tipoEtapas = $this->Pedidos->TipoEtapas->find('list', ['limit' => 200]);
+        $etapas = $this->Pedidos->Etapas->find('list', ['limit' => 200]);
         $vendedors = $this->Pedidos->Vendedors->find('list', ['limit' => 200]);
         $tipoProductos = $this->Pedidos->TipoProductos->find('list', ['limit' => 200]);
         $numeroCalzados = $this->Pedidos->NumeroCalzados->find('list', ['limit' => 200]);
         $diseniadors = $this->Pedidos->Diseniadors->find('list', ['limit' => 200]);
-        $this->set(compact('pedido', 'pacientes', 'sucursals', 'tipoEtapas', 'vendedors', 'tipoProductos', 'numeroCalzados', 'diseniadors'));
+        $this->set(compact('pedido', 'pacientes', 'sucursals', 'etapas', 'vendedors', 'tipoProductos', 'numeroCalzados', 'diseniadors'));
         $this->set('_serialize', ['pedido']);
     }
 
@@ -88,21 +88,21 @@ class PedidosController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $pedido = $this->Pedidos->patchEntity($pedido, $this->request->data);
             if ($this->Pedidos->save($pedido)) {
-                $this->Flash->success(__('El pedido se ha guardado.'));
+                $this->Flash->success(__('The pedido has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             } else {
-                $this->Flash->error(__('El pedido no ha podido ser guardado. Por favor, intenta de nuevo.'));
+                $this->Flash->error(__('The pedido could not be saved. Please, try again.'));
             }
         }
         $pacientes = $this->Pedidos->Pacientes->find('list', ['limit' => 200]);
         $sucursals = $this->Pedidos->Sucursals->find('list', ['limit' => 200]);
-        $tipoEtapas = $this->Pedidos->TipoEtapas->find('list', ['limit' => 200]);
+        $etapas = $this->Pedidos->Etapas->find('list', ['limit' => 200]);
         $vendedors = $this->Pedidos->Vendedors->find('list', ['limit' => 200]);
         $tipoProductos = $this->Pedidos->TipoProductos->find('list', ['limit' => 200]);
         $numeroCalzados = $this->Pedidos->NumeroCalzados->find('list', ['limit' => 200]);
         $diseniadors = $this->Pedidos->Diseniadors->find('list', ['limit' => 200]);
-        $this->set(compact('pedido', 'pacientes', 'sucursals', 'tipoEtapas', 'vendedors', 'tipoProductos', 'numeroCalzados', 'diseniadors'));
+        $this->set(compact('pedido', 'pacientes', 'sucursals', 'etapas', 'vendedors', 'tipoProductos', 'numeroCalzados', 'diseniadors'));
         $this->set('_serialize', ['pedido']);
     }
 
@@ -122,6 +122,7 @@ class PedidosController extends AppController
         } else {
             $this->Flash->error(__('El pedido ser eliminado. Por favor, intenta de nuevo.'));
         }
+
 
         return $this->redirect(['action' => 'index']);
     }

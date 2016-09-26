@@ -24,7 +24,7 @@ class PedidosFixture extends TestFixture
         'total' => ['type' => 'decimal', 'length' => 8, 'precision' => 2, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => ''],
         'paciente_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'sucursal_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
-        'etapa_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'tipo_etapa_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'estudio_id' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'vendedor_id' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'tipo_producto_id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
@@ -57,15 +57,15 @@ class PedidosFixture extends TestFixture
             'total' => 1.5,
             'paciente_id' => 1,
             'sucursal_id' => 1,
-            'etapa_id' => 1,
+            'tipo_etapa_id' => 1,
             'estudio_id' => 'Lorem ipsum dolor sit amet',
             'vendedor_id' => 'Lorem ipsum dolor sit amet',
             'tipo_producto_id' => 1,
             'numero_calzado_id' => 1,
             'diseniador_id' => 1,
-            'estudio_id_diseniador' => '2016-09-22 20:07:59',
-            'created' => '2016-09-22 20:07:59',
-            'modified' => '2016-09-22 20:07:59'
+            'estudio_id_diseniador' => '2016-09-26 02:36:53',
+            'created' => '2016-09-26 02:36:53',
+            'modified' => '2016-09-26 02:36:53'
         ],
     ];
 }

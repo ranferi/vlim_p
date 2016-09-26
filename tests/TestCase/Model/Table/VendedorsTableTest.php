@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\PedidosTable;
+use App\Model\Table\VendedorsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\PedidosTable Test Case
+ * App\Model\Table\VendedorsTable Test Case
  */
-class PedidosTableTest extends TestCase
+class VendedorsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\PedidosTable
+     * @var \App\Model\Table\VendedorsTable
      */
-    public $Pedidos;
+    public $Vendedors;
 
     /**
      * Fixtures
@@ -24,19 +24,19 @@ class PedidosTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.pedidos',
-        'app.pacientes',
-        'app.numero_calzados',
-        'app.disenios',
+        'app.vendedors',
         'app.usuarios',
         'app.tipo_usuarios',
         'app.empresas',
         'app.sucursals',
         'app.softwares',
         'app.avisos',
+        'app.pedidos',
+        'app.pacientes',
+        'app.numero_calzados',
+        'app.disenios',
         'app.estudios',
         'app.tipo_etapas',
-        'app.vendedors',
         'app.tipo_productos',
         'app.categoria_productos',
         'app.productos',
@@ -51,8 +51,8 @@ class PedidosTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Pedidos') ? [] : ['className' => 'App\Model\Table\PedidosTable'];
-        $this->Pedidos = TableRegistry::get('Pedidos', $config);
+        $config = TableRegistry::exists('Vendedors') ? [] : ['className' => 'App\Model\Table\VendedorsTable'];
+        $this->Vendedors = TableRegistry::get('Vendedors', $config);
     }
 
     /**
@@ -62,7 +62,7 @@ class PedidosTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Pedidos);
+        unset($this->Vendedors);
 
         parent::tearDown();
     }

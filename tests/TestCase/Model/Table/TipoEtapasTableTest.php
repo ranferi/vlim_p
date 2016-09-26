@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\PedidosTable;
+use App\Model\Table\TipoEtapasTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\PedidosTable Test Case
+ * App\Model\Table\TipoEtapasTable Test Case
  */
-class PedidosTableTest extends TestCase
+class TipoEtapasTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\PedidosTable
+     * @var \App\Model\Table\TipoEtapasTable
      */
-    public $Pedidos;
+    public $TipoEtapas;
 
     /**
      * Fixtures
@@ -24,6 +24,7 @@ class PedidosTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
+        'app.tipo_etapas',
         'app.pedidos',
         'app.pacientes',
         'app.numero_calzados',
@@ -35,7 +36,7 @@ class PedidosTableTest extends TestCase
         'app.softwares',
         'app.avisos',
         'app.estudios',
-        'app.tipo_etapas',
+        'app.etapas',
         'app.vendedors',
         'app.tipo_productos',
         'app.categoria_productos',
@@ -51,8 +52,8 @@ class PedidosTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Pedidos') ? [] : ['className' => 'App\Model\Table\PedidosTable'];
-        $this->Pedidos = TableRegistry::get('Pedidos', $config);
+        $config = TableRegistry::exists('TipoEtapas') ? [] : ['className' => 'App\Model\Table\TipoEtapasTable'];
+        $this->TipoEtapas = TableRegistry::get('TipoEtapas', $config);
     }
 
     /**
@@ -62,7 +63,7 @@ class PedidosTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Pedidos);
+        unset($this->TipoEtapas);
 
         parent::tearDown();
     }
@@ -83,16 +84,6 @@ class PedidosTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

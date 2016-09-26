@@ -6,10 +6,16 @@
         <li><?= $this->Html->link(__('New Paciente'), ['controller' => 'Pacientes', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Sucursals'), ['controller' => 'Sucursals', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Sucursal'), ['controller' => 'Sucursals', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Tipo Etapas'), ['controller' => 'TipoEtapas', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Tipo Etapa'), ['controller' => 'TipoEtapas', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Vendedors'), ['controller' => 'Vendedors', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Vendedor'), ['controller' => 'Vendedors', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Tipo Productos'), ['controller' => 'TipoProductos', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Tipo Producto'), ['controller' => 'TipoProductos', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Numero Calzados'), ['controller' => 'NumeroCalzados', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Numero Calzado'), ['controller' => 'NumeroCalzados', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Diseniadors'), ['controller' => 'Diseniadors', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Diseniador'), ['controller' => 'Diseniadors', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Estudios'), ['controller' => 'Estudios', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Estudio'), ['controller' => 'Estudios', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Disenios'), ['controller' => 'Disenios', 'action' => 'index']) ?></li>
@@ -27,12 +33,12 @@
             echo $this->Form->input('total');
             echo $this->Form->input('paciente_id', ['options' => $pacientes, 'empty' => true]);
             echo $this->Form->input('sucursal_id', ['options' => $sucursals, 'empty' => true]);
-            echo $this->Form->input('etapa_id');
+            echo $this->Form->input('tipo_etapa_id', ['options' => $tipoEtapas, 'empty' => true]);
             echo $this->Form->input('estudio_id');
-            echo $this->Form->input('vendedor_id');
+            echo $this->Form->input('vendedor_id', ['options' => $vendedors, 'empty' => true]);
             echo $this->Form->input('tipo_producto_id', ['options' => $tipoProductos, 'empty' => true]);
             echo $this->Form->input('numero_calzado_id', ['options' => $numeroCalzados, 'empty' => true]);
-            echo $this->Form->input('diseniador_id');
+            echo $this->Form->input('diseniador_id', ['options' => $diseniadors, 'empty' => true]);
             echo $this->Form->input('estudio_id_diseniador', ['empty' => true]);
         ?>
     </fieldset>
