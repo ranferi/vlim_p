@@ -10,6 +10,12 @@ use App\Controller\AppController;
  */
 class PacientesController extends AppController
 {
+    public $paginate = [
+        'limit' => 10,
+        'order' => [
+            'Pacientes.id' => 'asc'
+        ]
+    ];
 
     /**
      * Index method
@@ -18,12 +24,8 @@ class PacientesController extends AppController
      */
     public function index()
     {
-
-        $this->paginate = [
-            'contain' => ['Referidos', 'Softwares', 'NumeroCalzados', 'Sucursals']
-        ];
-        //$pacientes = $this->paginate($this->Pacientes);
-        $pacientes = $this->Pacientes->find('all');
+        $this->paginate['contain'] = ['Referidos', 'Softwares', 'NumeroCalzados', 'Sucursals'];
+        $pacientes = $this->paginate($this->Pacientes);
 
         $this->set(compact('pacientes'));
         $this->set('_serialize', ['pacientes']);

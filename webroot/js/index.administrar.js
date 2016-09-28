@@ -1,7 +1,11 @@
 (function($) {
     $(document).ready(function(e) {
         $("table#da-ex-datatable-numberpaging").dataTable({
-            sPaginationType: "full_numbers",
+            "sPaginationType": "full_numbers",
+            "bPaginate": false,
+            "bFilter": true,
+            "bSort": false,
+            "bInfo": false,
             "oLanguage": {
                 "sLengthMenu": "Mostrando _MENU_ resultados por página",
                 "sZeroRecords": "No se ha encontrado nada - disculpa",

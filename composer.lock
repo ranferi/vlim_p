@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c2d08268d917f40b99dc182724311f1a",
-    "content-hash": "ce5a695caa79a0be8bcb9ea7ccfb4bee",
+    "hash": "eab0f8392f2817b8fa85b725569d63c3",
+    "content-hash": "a92bc47df75501a47fb183a805f6b5ea",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -343,53 +343,6 @@
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
             "time": "2016-04-28 03:01:34"
-        },
-        {
-            "name": "fheider/cakephp-datatables",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fheider/cakephp-datatables.git",
-                "reference": "d3bf1d382edfd46ddca50688e5824cb7e4af14d1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fheider/cakephp-datatables/zipball/d3bf1d382edfd46ddca50688e5824cb7e4af14d1",
-                "reference": "d3bf1d382edfd46ddca50688e5824cb7e4af14d1",
-                "shasum": ""
-            },
-            "require": {
-                "cakephp/cakephp": "~3.0",
-                "php": ">=5.4.16"
-            },
-            "suggest": {
-                "cakephp/cakephp-codesniffer": "Allows to check the code against the coding standards used in CakePHP.",
-                "phpunit/phpunit": "Allows automated tests to be run without system-wide install."
-            },
-            "type": "cakephp-plugin",
-            "autoload": {
-                "psr-4": {
-                    "DataTables\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Frank Heider",
-                    "homepage": "https://github.com/fheider",
-                    "role": "Author"
-                }
-            ],
-            "description": "Use jQuery dataTables for CakePHP 3",
-            "homepage": "https://github.com/fheider/cakephp-datatables",
-            "keywords": [
-                "cakephp",
-                "datatables"
-            ],
-            "time": "2015-12-08 14:46:33"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -863,6 +816,54 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2016-09-02 02:12:52"
+        },
+        {
+            "name": "ypnos-web/cakephp-datatables",
+            "version": "dev-php5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ypnos-web/cakephp-datatables.git",
+                "reference": "06b8a9ff7265072ad46e5678818c7718331a6735"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ypnos-web/cakephp-datatables/zipball/06b8a9ff7265072ad46e5678818c7718331a6735",
+                "reference": "06b8a9ff7265072ad46e5678818c7718331a6735",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0",
+                "php": ">=5.5.9"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "DataTables\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank Heider",
+                    "homepage": "https://github.com/fheider",
+                    "role": "Author"
+                },
+                {
+                    "name": "Johannes Jordan",
+                    "homepage": "https://github.com/ypnos-web",
+                    "role": "Author"
+                }
+            ],
+            "description": "jQuery DataTables for CakePHP 3",
+            "homepage": "https://github.com/ypnos-web/cakephp-datatables",
+            "keywords": [
+                "cakephp",
+                "datatables"
+            ],
+            "time": "2016-07-28 17:57:26"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -1380,7 +1381,7 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "fheider/cakephp-datatables": 20,
+        "ypnos-web/cakephp-datatables": 20,
         "psy/psysh": 0
     },
     "prefer-stable": true,

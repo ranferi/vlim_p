@@ -11,7 +11,7 @@ use App\Controller\AppController;
 class AvisosController extends AppController
 {
     public $paginate = [
-        'limit' => 9,
+        'limit' => 10,
         'order' => [
             'Avisos.id' => 'desc'
         ]

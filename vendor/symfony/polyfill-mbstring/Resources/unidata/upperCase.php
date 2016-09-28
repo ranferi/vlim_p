@@ -1,6 +1,6 @@
 <?php
 
-static $data = array (
+static $pacientes = array (
   'a' => 'A',
   'b' => 'B',
   'c' => 'C',
@@ -1103,7 +1103,7 @@ static $data = array (
   '𑣟' => '𑢿',
 );
 
-$result =& $data;
-unset($data);
+$result =& $pacientes;
+unset($pacientes);
 
 return $result;

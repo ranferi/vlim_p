@@ -134,7 +134,7 @@ class ComposerStaticInitd5ec9360afc5f27ebdc93979f4728e68
         ),
         'DataTables\\' => 
         array (
-            0 => __DIR__ . '/..' . '/fheider/cakephp-datatables/src',
+            0 => __DIR__ . '/..' . '/ypnos-web/cakephp-datatables/src',
         ),
         'Cake\\Test\\' => 
         array (

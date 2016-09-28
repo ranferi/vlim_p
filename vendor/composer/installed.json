@@ -1370,29 +1370,25 @@
         ]
     },
     {
-        "name": "fheider/cakephp-datatables",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "name": "ypnos-web/cakephp-datatables",
+        "version": "dev-php5",
+        "version_normalized": "dev-php5",
         "source": {
             "type": "git",
-            "url": "https://github.com/fheider/cakephp-datatables.git",
-            "reference": "d3bf1d382edfd46ddca50688e5824cb7e4af14d1"
+            "url": "https://github.com/ypnos-web/cakephp-datatables.git",
+            "reference": "06b8a9ff7265072ad46e5678818c7718331a6735"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/fheider/cakephp-datatables/zipball/d3bf1d382edfd46ddca50688e5824cb7e4af14d1",
-            "reference": "d3bf1d382edfd46ddca50688e5824cb7e4af14d1",
+            "url": "https://api.github.com/repos/ypnos-web/cakephp-datatables/zipball/06b8a9ff7265072ad46e5678818c7718331a6735",
+            "reference": "06b8a9ff7265072ad46e5678818c7718331a6735",
             "shasum": ""
         },
         "require": {
             "cakephp/cakephp": "~3.0",
-            "php": ">=5.4.16"
+            "php": ">=5.5.9"
         },
-        "suggest": {
-            "cakephp/cakephp-codesniffer": "Allows to check the code against the coding standards used in CakePHP.",
-            "phpunit/phpunit": "Allows automated tests to be run without system-wide install."
-        },
-        "time": "2015-12-08 14:46:33",
+        "time": "2016-07-28 17:57:26",
         "type": "cakephp-plugin",
         "installation-source": "source",
         "autoload": {
@@ -1409,10 +1405,15 @@
                 "name": "Frank Heider",
                 "homepage": "https://github.com/fheider",
                 "role": "Author"
+            },
+            {
+                "name": "Johannes Jordan",
+                "homepage": "https://github.com/ypnos-web",
+                "role": "Author"
             }
         ],
-        "description": "Use jQuery dataTables for CakePHP 3",
-        "homepage": "https://github.com/fheider/cakephp-datatables",
+        "description": "jQuery DataTables for CakePHP 3",
+        "homepage": "https://github.com/ypnos-web/cakephp-datatables",
         "keywords": [
             "cakephp",
             "datatables"
