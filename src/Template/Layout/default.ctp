@@ -47,6 +47,7 @@
                 || $this->request->action === 'vendedores' || $this->request->action === 'diseniadores'))) {
         /* DataTables Plugin */
         $this->Html->script('/plugins/datatables/jquery.dataTables.min', ['block' => true]);
+        $this->Html->script('DataTables.cakephp.dataTables.js',['block' => true]);
         $this->Html->script('index.administrar', ['block' => true]);
     } else if($this->request->action === 'editar' || $this->request->action === 'crear') {
         /* Timepicker Plugin */
@@ -80,7 +81,7 @@
                 <!-- Container -->
                 <div class="da-container clearfix">
 
-                    <!-- Logo Container. All images put here will be vertically centere -->
+                    <!-- Logo Container. -->
                     <div id="da-logo-wrap">
                         <div id="da-logo">
                             <div id="da-logo-img">
@@ -112,7 +113,11 @@
 
                     <!-- Breadcrumbs -->
                     <div id="da-breadcrumb">
-                        <ul><li class="active"><a href="#"><i class="icon-home"></i> Inicio</a></li></ul>
+                        <?php echo $this->Html->getCrumbList([
+                                'firstClass' => false,
+                                'lastClass' => 'active',
+                                'escape' => false
+                        ], '<i class="icon-home"></i> Inicio'); ?>
                     </div>
 
                 </div>

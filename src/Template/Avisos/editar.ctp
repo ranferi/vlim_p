@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Avisos', '/avisos'); ?>
+<?php $this->Html->addCrumb('Editar', ['controller' => 'Avisos', 'action' => 'editar']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

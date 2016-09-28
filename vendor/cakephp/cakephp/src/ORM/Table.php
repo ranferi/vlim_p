@@ -1466,15 +1466,6 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
      */
     public function save(EntityInterface $entity, $options = [])
     {
-        $x = $entity->errors();
-        if ($x) {
-            debug($entity);
-            debug($x);
-            // if ($entity->errors()) {
-            return false;
-        }
-
-
         if ($options instanceof SaveOptionsBuilder) {
             $options = $options->toArray();
         }
@@ -1511,6 +1502,7 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
                 $this->dispatchEvent('Model.afterSaveCommit', compact('entity', 'options'));
             }
             if ($options['atomic'] || $options['_primary']) {
+                $entity->clean();
                 $entity->isNew(false);
                 $entity->source($this->registryAlias());
             }
@@ -1615,8 +1607,8 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
             throw new RolledbackTransactionException(['table' => get_class($this)]);
         }
 
-        $entity->clean();
         if (!$options['atomic'] && !$options['_primary']) {
+            $entity->clean();
             $entity->isNew(false);
             $entity->source($this->registryAlias());
         }

@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Pacientes', '/pacientes'); ?>
+<?php $this->Html->addCrumb('Ver', ['controller' => 'Pacientes', 'action' => 'ver']); ?>
 <div class="row-fluid">
     <div class="span6">
         <div class="da-panel collapsible">
@@ -32,56 +34,52 @@
                         <td><?= h($paciente->nombre_completo) ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Género') ?></th>
-                        <td><?= h($paciente->genero) ?></td>
+                        <th scope="row"><?= __('Sexo') ?></th>
+                        <td><?= h($paciente->sexo) ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Fecha Nacimiento') ?></th>
                         <td><?= h($paciente->fecha_nacimiento) ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Telefono') ?></th>
+                        <th scope="row"><?= __('Teléfono') ?></th>
                         <td><?= h($paciente->telefono) ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Correo') ?></th>
-                        <td><?= h($paciente->correo) ?></td>
+                        <th scope="row"><?= __('Email') ?></th>
+                        <td><?= h($paciente->email) ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Donde Nos Encontro') ?></th>
-                        <td><?= h($paciente->donde_nos_encontro) ?></td>
+                        <th scope="row"><?= __('¿Cómo nos encontro?') ?></th>
+                        <td><?= $paciente->has('referido') ? $this->Html->link($paciente->referido->id, ['controller' => 'Referidos', 'action' => 'view', $paciente->referido->id]) : '' ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Ref Doctor') ?></th>
-                        <td><?= h($paciente->ref_doctor) ?></td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><?= __('Numero Calzado') ?></th>
+                        <th scope="row"><?= __('Talla de Calzado') ?></th>
                         <td><?= $paciente->has('numero_calzado') ? $this->Html->link($paciente->numero_calzado->id, ['controller' => 'NumeroCalzados', 'action' => 'view', $paciente->numero_calzado->id]) : '' ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Dolor Espalda') ?></th>
-                        <td><?= h($paciente->dolor_espalda) ?></td>
+                        <td><?= $paciente->dolor_espalda ? __('Si') : __('No'); ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Dolor Rodilla') ?></th>
-                        <td><?= h($paciente->dolor_rodilla) ?></td>
+                        <td><?= $paciente->dolor_rodilla ? __('Si') : __('No'); ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Dolor Tobillo') ?></th>
-                        <td><?= h($paciente->dolor_tobillo) ?></td>
+                        <td><?= $paciente->dolor_tobillo ? __('Si') : __('No'); ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Dolor Cadera') ?></th>
-                        <td><?= h($paciente->dolor_cadera) ?></td>
+                        <td><?= $paciente->dolor_cadera ? __('Si') : __('No'); ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Dolor Pies') ?></th>
-                        <td><?= h($paciente->dolor_pies) ?></td>
+                        <td><?= $paciente->dolor_pies ? __('Si') : __('No'); ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Notificaciones') ?></th>
-                        <td><?= h($paciente->notificaciones) ?></td>
+                        <th scope="row"><?= __('Recibir Notificación') ?></th>
+                        <td><?= $paciente->recibir_notificacion ? __('Si') : __('No'); ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Patologia') ?></th>
@@ -94,6 +92,14 @@
                     <tr>
                         <th scope="row"><?= __('Peso') ?></th>
                         <td><?= $this->Number->format($paciente->peso) ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?= __('Creado') ?></th>
+                        <td><?= h($paciente->created) ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?= __('Modificado') ?></th>
+                        <td><?= h($paciente->modified) ?></td>
                     </tr>
                     </tbody>
                 </table>
@@ -112,28 +118,28 @@
                 <table class="da-table da-detail-view">
                     <tbody>
                     <tr>
-                        <th scope="row"><?= __('Calle No') ?></th>
-                        <td><?= h($paciente->calle_no) ?></td>
+                        <th scope="row"><?= __('Calle y Numero') ?></th>
+                        <td><?= h($paciente->calle_numero) ?></td>
                     </tr>
                     <tr>
                         <th scope="row"><?= __('Colonia') ?></th>
                         <td><?= h($paciente->colonia) ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Delegacion Municipio') ?></th>
+                        <th scope="row"><?= __('Delegación y Municipio') ?></th>
                         <td><?= h($paciente->delegacion_municipio) ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Ciudad Estado') ?></th>
+                        <th scope="row"><?= __('Ciudad y Estado') ?></th>
                         <td><?= h($paciente->ciudad_estado) ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Pais') ?></th>
+                        <th scope="row"><?= __('País') ?></th>
                         <td><?= h($paciente->pais) ?></td>
                     </tr>
                     <tr>
-                        <th scope="row"><?= __('Cp') ?></th>
-                        <td><?= h($paciente->cp) ?></td>
+                        <th scope="row"><?= __('Código Postal') ?></th>
+                        <td><?= h($paciente->codigo_postal) ?></td>
                     </tr>
                     </tbody>
                 </table>

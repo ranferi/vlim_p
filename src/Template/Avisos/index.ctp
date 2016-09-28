@@ -1,3 +1,4 @@
+<?php $this->Html->addCrumb('Avisos', ['controller' => 'Avisos', 'action' => 'index']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

@@ -34,3 +34,8 @@ div.da-panel-widget {
 div.da-panel-widget {
     padding:1em 1.2em;
 }
+
+.da-form-label-overflow {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

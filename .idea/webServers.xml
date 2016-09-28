@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="8f030a9d-e9db-4665-98de-29f4f712bc71" name="georix" url="http://ftp.georix.com.mx">
+        <fileTransfer host="ftp.georix.com.mx" port="21" rootFolder="/public_html/piedica">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

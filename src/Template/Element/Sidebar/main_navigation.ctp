@@ -1,6 +1,7 @@
+<?php $controlador = $this->request->controller; ?>
 <div id="da-main-nav" class="btn-container">
     <ul>
-        <li class="active">
+        <li <?php echo ($controlador === 'Avisos')? 'class="active"' : ''?>>
             <a href="#">
                 <span class="da-nav-icon"><i class="icon-home"></i></span>
                 <?= __('Avisos') ?>
@@ -10,7 +11,7 @@
                 <li><?= $this->Html->link(__('Administrar'), ['controller' => 'Avisos', 'action' => 'administrar']) ?></li>
             </ul>
         </li>
-        <li>
+        <li <?php echo ($controlador === 'Pacientes')? 'class="active"' : ''?>>
             <a href="#">
                 <span class="da-nav-icon"><i class="icon-parents"></i></span>
                 <?= __('Pacientes') ?>
@@ -20,7 +21,7 @@
                 <li><?= $this->Html->link(__('Administrar'), ['controller' => 'Pacientes', 'action' => 'index']) ?></li>
             </ul>
         </li>
-        <li>
+        <li <?php echo ($controlador === ('NumeroCalzados' || 'Materiales' || 'Softwares' || 'Recubrimientos'))? 'class="active"' : ''?>>
             <a href="#">
                 <span class="da-nav-icon"><i class="icon-hand-right"></i></span>
                 <?= __('Otros') ?>
@@ -32,7 +33,7 @@
                 <li><?= $this->Html->link(__('Recubrimientos'), ['controller' => 'Recubrimientos', 'action' => 'index']) ?></li>
             </ul>
         </li>
-        <li>
+        <li <?php echo ($controlador === 'Parametros')? 'class="active"' : ''?>>
             <a href="#">
                 <!-- Icon Container -->
                 <span class="da-nav-icon"><i class="icon-settings"></i></span>
@@ -43,7 +44,7 @@
                 <li><?= $this->Html->link(__('Administrar'), ['controller' => 'Parametros', 'action' => 'index']) ?></li>
             </ul>
         </li>
-        <li>
+        <li <?php echo ($controlador === 'Pedidos')? 'class="active"' : ''?>>
             <a href="#">
                 <!-- Icon Container -->
                 <span class="da-nav-icon"><i class="icon-cart-in"></i></span>
@@ -54,16 +55,16 @@
                 <li><?= $this->Html->link(__('Administrar'), ['controller' => 'Pedidos', 'action' => 'index']) ?></li>
             </ul>
         </li>
-        <li>
+        <li <?php echo ($controlador === 'Usuarios' && $this->request->action === 'ver')? 'class="active"' : ''?>>
             <a href="#">
                 <span class="da-nav-icon"><i class="icon-user"></i></span>
                 <?= __('Mi Perfil') ?>
             </a>
             <ul class="closed">
-                <li><?= $this->Html->link(__('Editar mi Perfil'), ['controller' => 'Productos', 'action' => 'ver', 1]) ?></li>
+                <li><?= $this->Html->link(__('Editar mi Perfil'), ['controller' => 'Usuarios', 'action' => 'ver', 1]) ?></li>
             </ul>
         </li>
-        <li>
+        <li <?php echo ($controlador === 'Productos')? 'class="active"' : ''?>>
             <a href="#"><span class="da-nav-icon"><i class="icon-blog"></i></span>
                 <?= __('Productos') ?>
             </a>
@@ -72,7 +73,7 @@
                 <li><?= $this->Html->link(__('Administrar'), ['controller' => 'Productos', 'action' => 'index']) ?></li>
             </ul>
         </li>
-        <li>
+        <li <?php echo ($controlador === 'CategoriaProductos')? 'class="active"' : ''?>>
             <a href="#"><span class="da-nav-icon"><i class="icon-more-windows"></i></span>
                 <?= __('Categorías de Productos') ?>
             </a>
@@ -81,7 +82,7 @@
                 <li><?= $this->Html->link(__('Administrar'), ['controller' => 'CategoriaProductos', 'action' => 'index']) ?></li>
             </ul>
         </li>
-        <li>
+        <li >
             <a href="#"><span class="da-nav-icon"><i class="icon-notes-2"></i></span>
                 Reporte
             </a>
@@ -90,7 +91,7 @@
                 <li><a href="typography.html">Typography</a></li>
             </ul>-->
         </li>
-        <li>
+        <li <?php echo ($controlador === 'Usuarios')? 'class="active"' : ''?>>
             <a href="#"><span class="da-nav-icon"><i class="icon-database-plus"></i></span>
                 <?= __('Usuarios') ?>
             </a>

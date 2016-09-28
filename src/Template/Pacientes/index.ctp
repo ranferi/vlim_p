@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Pacientes', '/pacientes'); ?>
+<?php $this->Html->addCrumb('Administrar', ['controller' => 'Pacientes', 'action' => 'administrar']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">
@@ -19,7 +21,7 @@
                     <tr role="row">
                         <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('nombre_completo', 'Nombre Completo') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('genero', 'Género') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('sexo') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('fecha_nacimiento', 'Fecha de Nacimiento') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('delegacion_municipio', 'Delegación y Municipio') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('ciudad_estado', 'Ciudad y Estado') ?></th>
@@ -34,7 +36,7 @@
                         <tr>
                             <td><?= $this->Number->format($paciente->id) ?></td>
                             <td><?= h($paciente->nombre_completo) ?></td>
-                            <td><?= h($paciente->genero) ?></td>
+                            <td><?= $paciente->sexo ? h('Masculino') : h('Femenino') ?></td>
                             <td><?= h($paciente->fecha_nacimiento) ?></td>
                             <td><?= h($paciente->delegacion_municipio) ?></td>
                             <td><?= h($paciente->ciudad_estado) ?></td>

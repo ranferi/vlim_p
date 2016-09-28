@@ -17,18 +17,22 @@ class PacientesControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.pacientes',
-        'app.numero_calzados',
-        'app.pedidos',
-        'app.sucursals',
+        'app.referidos',
+        'app.categoria_referidos',
         'app.softwares',
+        'app.sucursals',
         'app.empresas',
         'app.usuarios',
         'app.tipo_usuarios',
         'app.avisos',
-        'app.etapas',
+        'app.numero_calzados',
+        'app.pedidos',
+        'app.tipo_etapas',
         'app.estudios',
         'app.vendedors',
         'app.tipo_productos',
+        'app.categoria_productos',
+        'app.productos',
         'app.diseniadors',
         'app.disenios'
     ];

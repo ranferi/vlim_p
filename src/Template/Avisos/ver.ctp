@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Avisos', '/avisos'); ?>
+<?php $this->Html->addCrumb('Ver', ['controller' => 'Avisos', 'action' => 'ver']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">
@@ -8,14 +10,14 @@
             <div class="da-panel-toolbar">
                 <div class="btn-toolbar">
                     <div class="btn-group">
-                        <?= $this->Html->link('<i class="icol-pencil"></i>' . ' ' . __('Editar'),
+                        <?= $this->Html->link('<i class="icol-pencil"></i> ' . __('Editar'),
                             ['action' => 'editar', $aviso->id], ['class' => 'btn', 'escape' => false]) ?>
-                        <?= $this->Form->postLink('<i class="icol-cross"></i>' . ' ' . __('Eliminar'),
+                        <?= $this->Form->postLink('<i class="icol-cross"></i> ' . __('Eliminar'),
                             ['action' => 'eliminar', $aviso->id],
                             ['class' => 'btn', 'confirm' => __('¿Estás seguro de querer eliminar # {0}?', $aviso->id), 'escape' => false]) ?>
-                        <?= $this->Html->link('<i class="icol-add"></i>' . ' ' . __('Crear'),
+                        <?= $this->Html->link('<i class="icol-add"></i> ' . __('Crear'),
                             ['action' => 'crear'], ['class' => 'btn', 'escape' => false]) ?>
-                        <?= $this->Html->link('<i class="icol-text-list-bullets"></i>' . ' ' . __('Administrar'),
+                        <?= $this->Html->link('<i class="icol-text-list-bullets"></i> ' . __('Administrar'),
                             ['action' => 'administrar'], ['class' => 'btn', 'escape' => false]) ?>
                     </div>
                 </div>

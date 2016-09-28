@@ -21,6 +21,7 @@ return array(
     'Migrations\\' => array($vendorDir . '/cakephp/migrations/src'),
     'DebugKit\\Test\\Fixture\\' => array($vendorDir . '/cakephp/debug_kit/tests/Fixture'),
     'DebugKit\\' => array($vendorDir . '/cakephp/debug_kit/src'),
+    'DataTables\\' => array($vendorDir . '/fheider/cakephp-datatables/src'),
     'Cake\\Test\\' => array($vendorDir . '/cakephp/cakephp/tests'),
     'Cake\\Composer\\' => array($vendorDir . '/cakephp/plugin-installer/src'),
     'Cake\\Chronos\\' => array($vendorDir . '/cakephp/chronos/src'),

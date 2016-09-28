@@ -18,10 +18,12 @@ class PacientesController extends AppController
      */
     public function index()
     {
+
         $this->paginate = [
-            'contain' => ['NumeroCalzados']
+            'contain' => ['Referidos', 'Softwares', 'NumeroCalzados', 'Sucursals']
         ];
-        $pacientes = $this->paginate($this->Pacientes);
+        //$pacientes = $this->paginate($this->Pacientes);
+        $pacientes = $this->Pacientes->find('all');
 
         $this->set(compact('pacientes'));
         $this->set('_serialize', ['pacientes']);
@@ -37,10 +39,37 @@ class PacientesController extends AppController
     public function ver($id = null)
     {
         $paciente = $this->Pacientes->get($id, [
-            'contain' => ['NumeroCalzados', 'Disenios', 'Estudios', 'Pedidos']
+            'contain' => ['Referidos', 'Softwares', 'NumeroCalzados', 'Sucursals', 'Disenios', 'Estudios', 'Pedidos']
         ]);
 
         $this->set('paciente', $paciente);
+        $this->set('_serialize', ['paciente']);
+    }
+
+    /**
+     * Add method
+     *
+     * @return \Cake\Network\Response|void Redirects on successful add, renders view otherwise.
+     */
+    public function add()
+    {
+        $paciente = $this->Pacientes->newEntity();
+        if ($this->request->is('post')) {
+            $paciente = $this->Pacientes->patchEntity($paciente, $this->request->data);
+            if ($this->Pacientes->save($paciente)) {
+                $this->Flash->success(__('El paciente se ha guardado.'));
+
+                return $this->redirect(['action' => 'index']);
+            } else {
+                $this->Flash->error(__('El paciente no ha podido ser guardado. Por favor, intenta de nuevo.'));
+            }
+        }
+        $referidos = $this->Pacientes->Referidos->find('list', ['limit' => 200]);
+        $categoria_referidos = $this->Pacientes->Referidos->CategoriaReferidos->find('list', ['limit' => 200]);
+        $softwares = $this->Pacientes->Softwares->find('list', ['limit' => 200]);
+        $numeroCalzados = $this->Pacientes->NumeroCalzados->find('list', ['limit' => 200]);
+        $sucursals = $this->Pacientes->Sucursals->find('list', ['limit' => 200]);
+        $this->set(compact('paciente', 'referidos', 'softwares', 'numeroCalzados', 'sucursals', 'categoria_referidos'));
         $this->set('_serialize', ['paciente']);
     }
 
@@ -62,8 +91,12 @@ class PacientesController extends AppController
                 $this->Flash->error(__('El paciente no ha podido ser guardado. Por favor, intenta de nuevo.'));
             }
         }
+        $referidos = $this->Pacientes->Referidos->find('list', ['limit' => 200]);
+        $categoria_referidos = $this->Pacientes->Referidos->CategoriaReferidos->find('list', ['limit' => 200]);
+        $softwares = $this->Pacientes->Softwares->find('list', ['limit' => 200]);
         $numeroCalzados = $this->Pacientes->NumeroCalzados->find('list', ['limit' => 200]);
-        $this->set(compact('paciente', 'numeroCalzados'));
+        $sucursals = $this->Pacientes->Sucursals->find('list', ['limit' => 200]);
+        $this->set(compact('paciente', 'categoria_referidos', 'referidos', 'softwares', 'numeroCalzados', 'sucursals'));
         $this->set('_serialize', ['paciente']);
     }
 
@@ -89,8 +122,11 @@ class PacientesController extends AppController
                 $this->Flash->error(__('El paciente no ha podido ser guardado. Por favor, intenta de nuevo.'));
             }
         }
+        $referidos = $this->Pacientes->Referidos->find('list', ['limit' => 200]);
+        $softwares = $this->Pacientes->Softwares->find('list', ['limit' => 200]);
         $numeroCalzados = $this->Pacientes->NumeroCalzados->find('list', ['limit' => 200]);
-        $this->set(compact('paciente', 'numeroCalzados'));
+        $sucursals = $this->Pacientes->Sucursals->find('list', ['limit' => 200]);
+        $this->set(compact('paciente', 'referidos', 'softwares', 'numeroCalzados', 'sucursals'));
         $this->set('_serialize', ['paciente']);
     }
 

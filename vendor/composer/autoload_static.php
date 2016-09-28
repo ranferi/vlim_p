@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitd5ec9360afc5f27ebdc93979f4728e68
 {
     public static $files = array (
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '34122c0574b76bf21c9a8db62b5b9cf3' => __DIR__ . '/..' . '/cakephp/chronos/src/carbon_compat.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'c720f792236cd163ece8049879166850' => __DIR__ . '/..' . '/cakephp/cakephp/src/Core/functions.php',
         'ede59e3a405fb689cd1cebb7bb1db3fb' => __DIR__ . '/..' . '/cakephp/cakephp/src/Collection/functions.php',
         '90236b492da7ca2983a2ad6e33e4152e' => __DIR__ . '/..' . '/cakephp/cakephp/src/I18n/functions.php',
@@ -50,6 +50,7 @@ class ComposerStaticInitd5ec9360afc5f27ebdc93979f4728e68
         array (
             'DebugKit\\Test\\Fixture\\' => 22,
             'DebugKit\\' => 9,
+            'DataTables\\' => 11,
         ),
         'C' => 
         array (
@@ -130,6 +131,10 @@ class ComposerStaticInitd5ec9360afc5f27ebdc93979f4728e68
         'DebugKit\\' => 
         array (
             0 => __DIR__ . '/..' . '/cakephp/debug_kit/src',
+        ),
+        'DataTables\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fheider/cakephp-datatables/src',
         ),
         'Cake\\Test\\' => 
         array (
