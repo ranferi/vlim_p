@@ -57,7 +57,7 @@ modules.xml
 .idea
 
 #/vendor/*
-#/config/app.php
+/config/app.php
 /tmp/*
 /logs/*
 
@@ -66,3 +66,4 @@ modules.xml
 /.idea/deployment.xml
 /.idea/encodings.xml
 /.idea/codeStyleSettings.xml
+/.idea/
