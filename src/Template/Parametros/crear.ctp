@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Parametros', '/parametros'); ?>
+<?php $this->Html->addCrumb('Crear', ['controller' => 'Parametros', 'action' => 'crear']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

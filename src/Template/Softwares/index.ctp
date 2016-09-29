@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Software', '/softwares'); ?>
+<?php $this->Html->addCrumb('Administrar', ['controller' => 'Softwares', 'action' => 'index']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Materiales', '/materiales'); ?>
+<?php $this->Html->addCrumb('Editar', ['controller' => 'Materiales', 'action' => 'editar']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

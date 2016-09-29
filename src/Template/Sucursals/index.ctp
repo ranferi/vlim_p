@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Sucursales', '/sucursals'); ?>
+<?php $this->Html->addCrumb('Administrar', ['controller' => 'Sucursals', 'action' => 'index']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

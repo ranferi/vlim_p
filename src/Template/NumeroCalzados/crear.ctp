@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Tallas', '/numero-calzados'); ?>
+<?php $this->Html->addCrumb('Crear', ['controller' => 'NumeroCalzados', 'action' => 'crear']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

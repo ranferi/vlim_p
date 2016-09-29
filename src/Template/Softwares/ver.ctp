@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Software', '/softwares'); ?>
+<?php $this->Html->addCrumb('Ver', ['controller' => 'Softwares', 'action' => 'ver']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Recubrimientos', '/recubrimientos'); ?>
+<?php $this->Html->addCrumb('Crear', ['controller' => 'Recubrimientos', 'action' => 'crear']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

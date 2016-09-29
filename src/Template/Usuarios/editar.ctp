@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Usuarios', '/usuarios'); ?>
+<?php $this->Html->addCrumb('Editar', ['controller' => 'Usuarios', 'action' => 'editar']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">

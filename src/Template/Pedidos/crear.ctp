@@ -1,3 +1,5 @@
+<?php $this->Html->addCrumb('Pedidos', '/pedidos'); ?>
+<?php $this->Html->addCrumb('Crear', ['controller' => 'Pedidos', 'action' => 'crear']); ?>
 <div class="row-fluid">
     <div class="span12">
         <div class="da-panel collapsible">
