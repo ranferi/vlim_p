@@ -24,11 +24,18 @@ class PacientesController extends AppController
      */
     public function index()
     {
-        $this->paginate['contain'] = ['Referidos', 'Softwares', 'NumeroCalzados', 'Sucursals'];
-        $pacientes = $this->paginate($this->Pacientes);
+        $data = $this->DataTables->find('Pacientes', 'all', [
+            'contain' => [],
+            'order' => ['id' => 'asc']
+        ]);
+        $this->set('data', $data);
+        $this->set('_serialize', array_merge($this->viewVars['_serialize'], ['data']));
 
-        $this->set(compact('pacientes'));
-        $this->set('_serialize', ['pacientes']);
+        // $this->paginate = ['contain' => ['Referidos', 'Softwares', 'NumeroCalzados', 'Sucursals']];
+        //$pacientes = $this->paginate($this->Pacientes);
+
+        //$this->set(compact('pacientes'));
+        //$this->set('_serialize', ['pacientes']);
     }
 
     /**

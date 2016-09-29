@@ -54,6 +54,21 @@
                     <?php endforeach; ?>
                     </tbody>
                 </table>
+                <div class="dataTables_wrapper">
+                    <div class="dataTables_info">
+                        <?= $this->Paginator->counter('Página {{page}} de {{pages}}, mostrando {{current}} resultados de {{count}} en total') ?>
+                    </div>
+
+                    <div class="dataTables_paginate paging_full_numbers" id="da-ex-datatable-numberpaging_paginate">
+                        <?= $this->Paginator->first(__('Primero')) ?>
+                        <?= $this->Paginator->prev(__('Anterior')) ?>
+                        <span>
+                            <?= $this->Paginator->numbers() ?>
+                        </span>
+                        <?= $this->Paginator->next(__('Siguiente')) ?>
+                        <?= $this->Paginator->last(__('Último')) ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

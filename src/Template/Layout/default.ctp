@@ -29,7 +29,7 @@
     <?= $this->Html->css('dandelion.css') ?>
 
     <!-- JS Libs -->
-    <?= $this->Html->script('libs/jquery-1.12.4.min', ['block' => true]) ?>
+    <?= $this->Html->script('libs/jquery-1.12.3', ['block' => true]) ?>
     <?= $this->Html->script('libs/jquery.mousewheel.min', ['block' => true]) ?>
 
     <!-- JS Bootstrap -->
@@ -46,8 +46,10 @@
             ($this->request->action === 'produccion' || $this->request->action === 'control'
                 || $this->request->action === 'vendedores' || $this->request->action === 'diseniadores'))) {
         /* DataTables Plugin */
-        $this->Html->script('/plugins/datatables/jquery.dataTables.min', ['block' => true]);
-        $this->Html->script('index.administrar.js', ['block' => true]);
+        $this->Html->script('/plugins/datatables/datatables', ['block' => true]);
+        $this->Html->css('/plugins/datatables/datatables.min', ['block' => true]);
+        $this->Html->script('DataTables.cakephp.dataTables.js', ['block' => true]);
+        $this->Html->script('index.administrar', ['block' => true]);
     } else if($this->request->action === 'editar' || $this->request->action === 'crear') {
         /* Timepicker Plugin */
         $this->Html->script('/jui/jquery.ui.timepicker.min', ['block' => true]);
