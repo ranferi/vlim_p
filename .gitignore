@@ -54,9 +54,15 @@ fabric.properties
 modules.xml
 .idea/misc.xml
 *.ipr
+.idea
 
 #/vendor/*
 #/config/app.php
 /tmp/*
 /logs/*
 
+/.idea
+/.idea/webServers.xml
+/.idea/deployment.xml
+/.idea/encodings.xml
+/.idea/codeStyleSettings.xml
